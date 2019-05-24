@@ -8,10 +8,13 @@ class Ventana:
     def __init__(self, height, width):
         self.height = height
         self.width = width
+        self.flag = True
 
+    def Quit(self):
+        self.flag = False
+        print('quit')
 
-
-    def draw(self):
+    def __draw__(self):
         #Ventana Principal
         V_inicio = Tk()
         V_inicio.title('Formula CE')
@@ -45,6 +48,7 @@ class Ventana:
         # boton de Test drive
         cinta_opciones.add_cascade(label='Test drive')
 
-
+        # boton de salida
+        cinta_opciones.add_cascade(label='Quit', command=self.Quit)
         V_inicio.mainloop()
 
