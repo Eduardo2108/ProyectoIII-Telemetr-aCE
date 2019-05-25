@@ -13,14 +13,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="318">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="e#23#68#1" />
-                <element signature="e#132#692#0" />
-                <element signature="e#213#232#0" />
-                <element signature="e#234#267#0" />
-                <element signature="e#784#788#0" />
+                <element signature="e#1010#1630#0" />
+                <element signature="e#784#806#0" />
+                <element signature="e#779#1027#0" />
+                <element signature="e#837#850#0" />
+                <element signature="e#1763#1767#0" />
+                <element signature="e#1797#1801#0" />
+                <element signature="e#1835#1839#0" />
+                <element signature="e#2121#2635#0" />
               </folding>
             </state>
           </provider>
@@ -34,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2200">
-              <caret line="226" column="101" selection-start-line="226" selection-start-column="101" selection-end-line="226" selection-end-column="101" />
+            <state>
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#974#1579#0" />
@@ -291,12 +294,12 @@
       <updated>1558681146871</updated>
       <workItem from="1558712958245" duration="834000" />
       <workItem from="1558730600781" duration="6326000" />
-      <workItem from="1558740017133" duration="2438000" />
+      <workItem from="1558740017133" duration="4563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9598000" />
+    <option name="totallyTimeSpent" value="11723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -315,7 +318,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.39886847" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49932975" visible="true" weight="0.36633664" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49932975" weight="0.36633664" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -443,27 +446,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainScreen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding>
-            <element signature="e#23#68#1" />
-            <element signature="e#132#692#0" />
-            <element signature="e#213#232#0" />
-            <element signature="e#234#267#0" />
-            <element signature="e#784#788#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="226" column="101" selection-start-line="226" selection-start-column="101" selection-end-line="226" selection-end-column="101" />
+        <state>
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#974#1579#0" />
@@ -516,6 +502,50 @@
             <element signature="e#14136#14177#0" />
             <element signature="e#14263#14308#0" />
             <element signature="e#14391#14497#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py</OriginalElement>
+          <nodes>
+            <node x="0.0" y="80.0">mainScreen.Ventana</node>
+            <node x="57.5" y="0.0">object</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="mainScreen.Ventana" target="object">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-405.0" y="-33.0" />
+          <SelectedNodes>
+            <node>mainScreen.Ventana</node>
+          </SelectedNodes>
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#1010#1630#0" />
+            <element signature="e#784#806#0" />
+            <element signature="e#779#1027#0" />
+            <element signature="e#837#850#0" />
+            <element signature="e#1763#1767#0" />
+            <element signature="e#1797#1801#0" />
+            <element signature="e#1835#1839#0" />
+            <element signature="e#2121#2635#0" />
           </folding>
         </state>
       </provider>
