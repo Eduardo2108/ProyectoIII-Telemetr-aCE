@@ -9,46 +9,55 @@ class Ventana:
         self.height = height
         self.width = width
         self.flag = True
+        #Settings of window
+
+        #Window itself
+        self.V_inicio = Tk()
+        self.V_inicio.title('Formula CE')
+        self.V_inicio.minsize(self.width, self.height)
+        self.V_inicio.resizable(width=NO, height=NO)
+        #Main canvas
+        self.C_inicio = Canvas(self.V_inicio, width=self.width, height=self.height, bg='white')
+
+        #Main menu
+
+        self.cinta_opciones = Menu(self.V_inicio)
+        self.V_inicio.config(menu=self.cinta_opciones)
 
     def Quit(self):
         self.flag = False
         print('quit')
+    def canvas_clean(self):
+        pass
+    def test_drive(self):
+        
+
+
 
     def __draw__(self):
-        #Ventana Principal
-        V_inicio = Tk()
-        V_inicio.title('Formula CE')
-        V_inicio.minsize(self.width, self.height)
-        V_inicio.resizable(width=NO, height=NO)
         #_________________________
         # Canvas de la ventana...
         #_________________________
-
-        C_inicio = Canvas(V_inicio, width=self.width, height=self.height, bg='white')
-        C_inicio.place(x=0, y=0)
-
-        #_______________________________________
-        # Crea la cinta de opciones del programa
-        #_______________________________________
-        cinta_opciones = Menu(V_inicio)
-        V_inicio.config(menu=cinta_opciones)
-
+        self.C_inicio.place(x=0, y=0)
         # Boton Home
-        cinta_opciones.add_cascade(label='Home')
-        cinta_opciones.add_separator()
+        self.cinta_opciones.add_cascade(label='Home')
+        self.cinta_opciones.add_separator()
 
         # Boton about
-        cinta_opciones.add_cascade(label='About')
-        cinta_opciones.add_separator()
+        self.cinta_opciones.add_cascade(label='About')
+        self.cinta_opciones.add_separator()
 
         # Boton posiciones
-        cinta_opciones.add_cascade(label='Positions')
-        cinta_opciones.add_separator()
+        self.cinta_opciones.add_cascade(label='Positions')
+        self.cinta_opciones.add_separator()
 
         # boton de Test drive
-        cinta_opciones.add_cascade(label='Test drive')
+        self.cinta_opciones.add_cascade(label='Test drive')
 
         # boton de salida
-        cinta_opciones.add_cascade(label='Quit', command=self.Quit)
-        V_inicio.mainloop()
+        self.cinta_opciones.add_cascade(label='Quit', command=self.Quit)
+        self.V_inicio.mainloop()
 
+ventana = Ventana(500,500)
+
+ventana.__draw__()
