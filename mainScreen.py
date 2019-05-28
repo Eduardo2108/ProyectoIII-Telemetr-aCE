@@ -29,7 +29,6 @@ __draw__ >>> funcion que pone todo en la pantalla y la actualiza
 
 """
 
-
 class Ventana:
 
     def __init__(self, width, height):
@@ -52,15 +51,37 @@ class Ventana:
         self.cinta_opciones = Menu(self.V_inicio)
         self.V_inicio.config(menu=self.cinta_opciones)
 
+
+
     def canvas_clean(self):
         self.C_inicio.delete('all')
 
-    def test_drive(self):
-        #lineas guias
+    def test_drive(self, car, driver, country, team):
+        pwm = 0
+
+        #lineas guias para diseño del entorno... ''
         #______________________________
         self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
-
         self.C_inicio.create_line((self.width/2),0,  (self.width /2), self.height,) #vertical
+
+        #Etiquetas de informacion, carro, piloto...
+        marcaAuto = Label(self.C_inicio, text= str(car), font=("Arial ", 12), justify=CENTER)
+        marcaAuto.place(x=10,y=10) #Etiqueta del modelo del carro...
+
+        escuderia = Label(self.C_inicio, text=str(team), font=("Arial ", 12), justify=CENTER)
+        escuderia.place(x=10, y=40)  # Etiqueta de la escuderia
+
+        Nombre = Label(self.C_inicio, text = str(driver), font=('Arial', 12), width =9,justify= LEFT)
+        Nombre.place(x=10, y= 70)
+
+        Country = Label(self.C_inicio, text= str(country),font=('Arial', 12), justify=CENTER)
+        Country.place(x=110, y= 70)
+
+        Team = Label(self.C_inicio, text = 'Team ' + str(team),font=('Arial', 12), justify=CENTER )
+        Team.place(x=10, y =100)
+        #Creacion de boton que aumenta el valor del pwm del motor...
+        acelerador = Button(self.C_inicio, text='Acelerador')
+        acelerador.place(x=400,y=400)
 
     def inicio(self):
         pass
@@ -86,7 +107,7 @@ class Ventana:
         self.cinta_opciones.add_separator()
 
         # boton de Test drive
-        self.cinta_opciones.add_cascade(label='Test drive',command= self.test_drive)
+        self.cinta_opciones.add_cascade(label='Test drive',command= lambda: self.test_drive('Ferrari LaFerrari', 'Eduardo', 'CRC','Ferrari'))
 
 
         self.V_inicio.mainloop()

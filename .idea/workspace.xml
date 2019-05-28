@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/mainScreen.py" line="109" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="422bd434-ab8c-43d4-997e-38e0d023e0c2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,32 +16,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#1010#1630#0" />
-                <element signature="e#784#806#0" />
-                <element signature="e#779#1027#0" />
-                <element signature="e#837#850#0" />
-                <element signature="e#1763#1767#0" />
-                <element signature="e#1797#1801#0" />
-                <element signature="e#1835#1839#0" />
-                <element signature="e#2121#2635#0" />
-              </folding>
+            <state relative-caret-position="50">
+              <caret line="73" column="101" selection-start-line="73" selection-start-column="101" selection-end-line="73" selection-end-column="101" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+            <state relative-caret-position="330">
+              <caret line="172" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#974#1579#0" />
@@ -109,6 +97,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mainScreen.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../../Proyecto_II_Taller/TelemetryLog.py" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" root0="SKIP_INSPECTION" />
   </component>
@@ -124,11 +113,12 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
+        <option value="$PROJECT_DIR$/cars.py" />
         <option value="$PROJECT_DIR$/mainScreen.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -294,12 +284,15 @@
       <updated>1558681146871</updated>
       <workItem from="1558712958245" duration="834000" />
       <workItem from="1558730600781" duration="6326000" />
-      <workItem from="1558740017133" duration="4563000" />
+      <workItem from="1558740017133" duration="5268000" />
+      <workItem from="1558761515922" duration="3851000" />
+      <workItem from="1558899120055" duration="666000" />
+      <workItem from="1559010957201" duration="3430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11723000" />
+    <option name="totallyTimeSpent" value="20375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -311,14 +304,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.39886847" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989899" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.39886847" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49932975" weight="0.36633664" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49932975" visible="true" weight="0.40876946" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -360,7 +353,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1558735982286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1558741356433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559014911648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TelemetryLog.coverage" NAME="TelemetryLog Coverage Results" MODIFIED="1558732865143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Proyecto_II_Taller" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1558733532041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1558732077901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
@@ -446,10 +439,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
+    <entry file="uml://Python/#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py</OriginalElement>
+          <nodes>
+            <node x="0.0" y="80.0">mainScreen.Ventana</node>
+            <node x="57.5" y="0.0">object</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="mainScreen.Ventana" target="object">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-405.0" y="-33.0" />
+          <SelectedNodes>
+            <node>mainScreen.Ventana</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cars.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="1704" selection-start-line="1704" selection-end-line="1704" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#974#1579#0" />
@@ -506,47 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://Python/#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#C:/Users/eduar/Desktop/Proyecto III Telemetria CE/ProyectoIII-TelemetriaCE/mainScreen.py</OriginalElement>
-          <nodes>
-            <node x="0.0" y="80.0">mainScreen.Ventana</node>
-            <node x="57.5" y="0.0">object</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="mainScreen.Ventana" target="object">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-405.0" y="-33.0" />
-          <SelectedNodes>
-            <node>mainScreen.Ventana</node>
-          </SelectedNodes>
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#1010#1630#0" />
-            <element signature="e#784#806#0" />
-            <element signature="e#779#1027#0" />
-            <element signature="e#837#850#0" />
-            <element signature="e#1763#1767#0" />
-            <element signature="e#1797#1801#0" />
-            <element signature="e#1835#1839#0" />
-            <element signature="e#2121#2635#0" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="73" column="101" selection-start-line="73" selection-start-column="101" selection-end-line="73" selection-end-column="101" />
         </state>
       </provider>
     </entry>
