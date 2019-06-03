@@ -1,5 +1,12 @@
-
 from tkinter import *
+from threading import Thread
+import threading
+import time
+import os
+import winsound
+import random
+from tkinter import messagebox
+
 """
 Clase que dibuja la ventana principal
 
@@ -51,14 +58,33 @@ class Ventana:
         self.cinta_opciones = Menu(self.V_inicio)
         self.V_inicio.config(menu=self.cinta_opciones)
 
+        self.pwm = 0
 
+    def cargarImagen(self, nombre):
+        ruta = os.path.join('resources', nombre)
+        imagen = PhotoImage(file=ruta)
+        return imagen
 
     def canvas_clean(self):
         self.C_inicio.delete('all')
 
     def test_drive(self, car, driver, country, team):
-        pwm = 0
 
+        def acelera():
+
+            if self.pwm == 1020:
+                print("velocidad maxima")
+            else:
+                self.pwm += 10
+                print(self.pwm)
+        def brake():
+
+            if self.pwm == -1023:
+                print("reversa maxima")
+            else:
+
+                self.pwm -= 10
+                print(self.pwm)
         #lineas guias para diseño del entorno... ''
         #______________________________
         self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
@@ -67,21 +93,21 @@ class Ventana:
         #Etiquetas de informacion, carro, piloto...
         marcaAuto = Label(self.C_inicio, text= str(car), font=("Arial ", 12), justify=CENTER)
         marcaAuto.place(x=10,y=10) #Etiqueta del modelo del carro...
-
-        escuderia = Label(self.C_inicio, text=str(team), font=("Arial ", 12), justify=CENTER)
-        escuderia.place(x=10, y=40)  # Etiqueta de la escuderia
-
         Nombre = Label(self.C_inicio, text = str(driver), font=('Arial', 12), width =9,justify= LEFT)
-        Nombre.place(x=10, y= 70)
-
+        Nombre.place(x=10, y= 40)
         Country = Label(self.C_inicio, text= str(country),font=('Arial', 12), justify=CENTER)
-        Country.place(x=110, y= 70)
-
+        Country.place(x=110, y= 40)
         Team = Label(self.C_inicio, text = 'Team ' + str(team),font=('Arial', 12), justify=CENTER )
-        Team.place(x=10, y =100)
-        #Creacion de boton que aumenta el valor del pwm del motor...
-        acelerador = Button(self.C_inicio, text='Acelerador')
-        acelerador.place(x=400,y=400)
+        Team.place(x=10, y =70)
+        #---|------------------------|
+        #   |  COMANDOS DEL CARRO    |
+        #---|------------------------|
+        gas_image = self.cargarImagen('gas.png')
+        brake_image = self.cargarImagen('brake.png')
+        gas = Button(self.C_inicio, text='gas',command = acelera)
+        gas.place(x=750, y=430)
+        freno = Button(self.C_inicio,text='brake', command = brake)
+        freno.place(x=900, y=430)
 
     def inicio(self):
         pass
@@ -107,7 +133,7 @@ class Ventana:
         self.cinta_opciones.add_separator()
 
         # boton de Test drive
-        self.cinta_opciones.add_cascade(label='Test drive',command= lambda: self.test_drive('Ferrari LaFerrari', 'Eduardo', 'CRC','Ferrari'))
+        self.cinta_opciones.add_cascade(label='Test drive',command= lambda: self.test_drive('Ferrari 428 italia ', 'Eduardo', 'CRC','Redbull'))
 
 
         self.V_inicio.mainloop()
