@@ -59,6 +59,7 @@ class Ventana:
         self.V_inicio.config(menu=self.cinta_opciones)
 
         self.pwm = 0
+        self.dir_state = 0
 
     def cargarImagen(self, nombre):
         ruta = os.path.join('resources', nombre)
@@ -71,6 +72,10 @@ class Ventana:
     def test_drive(self, car, driver, country, team):
         count = StringVar()
         count.set(0)
+        color = 'black'
+        dir_state = 0 #variable que guarda estado de direccionales
+                                    # <--- | ^  |  --->
+                                    #  -1  | 0  |  1
         def acelera():
 
             if self.pwm == 1020:
@@ -79,14 +84,43 @@ class Ventana:
                 self.pwm += 10
                 count.set(self.pwm)
 
-
-        def brake():
+        def brake(event):
 
             if self.pwm == -1023:
                 print("reversa maxima")
             else:
+                if self.pwm <= -50:
+                    print('new color')
+                    color = 'yellow'
                 self.pwm-=10
                 count.set(self.pwm)
+
+        def dir_lights(new_state):
+
+            if new_state == 1:
+
+                if self.dir_state == -1:
+                    self.dir_state = 0
+                    print(self.dir_state)
+
+                else:
+
+                    self.dir_state = 1
+                    print(self.dir_state)
+z
+            elif new_state == -1:
+
+                if self.dir_state == 1:
+                    self.dir_state = 0
+                    print(self.dir_state)
+                else:
+                    self.dir_state = -1
+                    print(self.dir_state)
+
+            elif new_state == 0:
+                self.dir_state = 0
+                print(self.dir_state)
+
         #lineas guias para diseño del entorno... ''
         #______________________________
         self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
@@ -101,23 +135,37 @@ class Ventana:
         Country.place(x=110, y= 40)
         Team = Label(self.C_inicio, text = 'Team ' + str(team),font=('Arial', 12), justify=CENTER )
         Team.place(x=10, y =70)
+
+
+
         #---|------------------------|
         #   |  COMANDOS DEL CARRO    |
         #---|------------------------|
         #--------------------Carga Imagenes--------------------------#
         gas_image = self.cargarImagen('gas.png')
         brake_image = self.cargarImagen('brake.png')
+
         #---------------------Acelerador-----------------------------#
         gas = Button(self.C_inicio, text='gas',command = acelera)
         gas.place(x=750, y=430)
+
         #------------------------Freno-------------------------------#
-        freno = Button(self.C_inicio,text='brake', command = brake)
+        freno = Button(self.C_inicio,text='brake', command=lambda: brake(None))
+        freno.bind("<w>",brake)
+
         freno.place(x=900, y=430)
+
         #-----------------Indicador velocidad------------------------#
-        #self.C_inicio.create_text(330, 300, textvariable= count,font=("Unispace", "20"), anchor=NW)
-        l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45))
+        l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45),fg=color)
         l.place(x=490,y=300)
         #-----------------------Direccionales------------------------#
+        izquierda = Button(self.C_inicio, text = 'left',command = lambda: dir_lights(-1))
+        derecha = Button(self.C_inicio, text= 'derecha',command = lambda: dir_lights(1))
+        off  = Button(self.C_inicio, text= 'dir off', command = lambda: dir_lights(0))
+        izquierda.place(x=200,y=400)
+        derecha.place(x=400,y=400)
+        off.place(x=300,y=400)
+
 
 
     def inicio(self):
@@ -134,21 +182,17 @@ class Ventana:
         # Boton Home
         self.cinta_opciones.add_cascade(label='Home')
         self.cinta_opciones.add_separator()
-
         # Boton about
         self.cinta_opciones.add_cascade(label='About')
         self.cinta_opciones.add_separator()
-
         # Boton posiciones
         self.cinta_opciones.add_cascade(label='Positions')
         self.cinta_opciones.add_separator()
-
         # boton de Test drive
         self.cinta_opciones.add_cascade(label='Test drive',command= lambda: self.test_drive('Ferrari 428 italia ', 'Eduardo', 'CRC','Redbull'))
-
-
         self.V_inicio.mainloop()
 
-ventana = Ventana(1024,728)
 
+ventana = Ventana(1024,728)
 ventana.__draw__()
+
