@@ -69,22 +69,24 @@ class Ventana:
         self.C_inicio.delete('all')
 
     def test_drive(self, car, driver, country, team):
-
+        count = StringVar()
+        count.set(0)
         def acelera():
 
             if self.pwm == 1020:
                 print("velocidad maxima")
             else:
                 self.pwm += 10
-                print(self.pwm)
+                count.set(self.pwm)
+
+
         def brake():
 
             if self.pwm == -1023:
                 print("reversa maxima")
             else:
-
-                self.pwm -= 10
-                print(self.pwm)
+                self.pwm-=10
+                count.set(self.pwm)
         #lineas guias para diseño del entorno... ''
         #______________________________
         self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
@@ -102,12 +104,21 @@ class Ventana:
         #---|------------------------|
         #   |  COMANDOS DEL CARRO    |
         #---|------------------------|
+        #--------------------Carga Imagenes--------------------------#
         gas_image = self.cargarImagen('gas.png')
         brake_image = self.cargarImagen('brake.png')
+        #---------------------Acelerador-----------------------------#
         gas = Button(self.C_inicio, text='gas',command = acelera)
         gas.place(x=750, y=430)
+        #------------------------Freno-------------------------------#
         freno = Button(self.C_inicio,text='brake', command = brake)
         freno.place(x=900, y=430)
+        #-----------------Indicador velocidad------------------------#
+        #self.C_inicio.create_text(330, 300, textvariable= count,font=("Unispace", "20"), anchor=NW)
+        l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45))
+        l.place(x=490,y=300)
+        #-----------------------Direccionales------------------------#
+
 
     def inicio(self):
         pass
