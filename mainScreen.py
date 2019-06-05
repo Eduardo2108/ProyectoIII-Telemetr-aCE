@@ -94,51 +94,111 @@ class Ventana:
                     color = 'yellow'
                 self.pwm-=10
                 count.set(self.pwm)
-
-        def dir_lights_right(event):
+        def dir_lights_right():
 
             if self.dir_state == -1:
                     self.dir_state = 0
-                    print(self.dir_state)
+                    print('direccional derecha: ', self.dir_state)
             else:
+                self.dir_state = 1
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
 
-                    self.dir_state = 1
-                    print(self.dir_state)
+                self.dir_state = 0
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
 
-        def dir_lights_left(event):
+                self.dir_state = 1
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
+
+                self.dir_state = 0
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
+                self.dir_state = 1
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
+
+                self.dir_state = 0
+                print('direccional derecha: ', self.dir_state)
+                time.sleep(0.75)
+
+                print('done')
+        def dir_lights_left():
 
             if self.dir_state == 1:
                 self.dir_state = 0
-                print(self.dir_state)
+                print('comando direccionales: ',self.dir_state)
+
             else:
 
                 self.dir_state = -1
-                print(self.dir_state)
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
 
-        def gira_derecha(event):
+                self.dir_state = 0
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
+
+                self.dir_state = -1
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
+
+                self.dir_state = 0
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
+                self.dir_state = -1
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
+
+                self.dir_state = 0
+                print('direccional izquierda: ', self.dir_state)
+                time.sleep(0.75)
+
+                print('done')
+        def gira_derecha():
             turn = 1
             dir_state = 1
+            print('Comando dir, comando direccionales: ')
             print(turn, dir_state)
-            time.sleep(2)
+            time.sleep(0.2)
             turn = 0
             dir_state = 0
+            print("comando dir:, comando direccionales: ")
             print(turn, dir_state)
-        def gira_izquierda(event):
+        def gira_izquierda():
 
             turn = -1
             dir_state = -1
+            print("comando dir:, comando direccionales: ")
             print(turn, dir_state)
             time.sleep(2)
             turn = 0
             dir_state = 0
+            print("comando dir:, comando direccionales: ")
             print(turn, dir_state)
         def brake(event):
             if self.pwm > 0:
-                self.pwm -= 20
+                self.pwm -= 10
                 count.set(self.pwm)
             elif self.pwm <0:
-                self.pwm +=20
+                self.pwm +=10
                 count.set(self.pwm)
+        def movimiento_especial(event):
+            print("Envia movimiento especial...")
+        def celebracion(event):
+            print("Envia celebracion...")
+        def enciende_frontales(event):
+            print('enciende frontales')
+        def enciende_traseras(event):
+            print('eciende traseras')
+        def enciende_emergencia(event):
+            print("enciende ambas direccionales")
+        def enciende_all_lights(event):
+            enciende_frontales()
+            enciende_traseras()
+            enciende_emergencia()
+            print('enciende todas las luces.....')
         #lineas guias para diseño del entorno... ''
         #______________________________
         #self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
@@ -159,13 +219,6 @@ class Ventana:
         #---|------------------------|
         #   |  COMANDOS DEL CARRO    |
         #---|------------------------|
-        #--------------------Carga Imagenes--------------------------#
-        #gas_image = self.cargarImagen('gas.png')
-        #brake_image = self.cargarImagen('reverse.png')
-        #left_dir_image = self.cargarImagen('left_dir.png')
-        #right_dir_image = self.cargarImagen('right_dir.png')
-        #turn_right_image = self.cargarImagen('turn_right_arrow.png')
-        #turn_left_image = self.cargarImagen('turn_left_arrow.png')
 
         #---------------Volante con medidor velocidad----------------#
         steer_image = self.cargarImagen('bg.png')
@@ -177,41 +230,41 @@ class Ventana:
         l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45),fg=color)
         l.place(x=490,y=570)
 
-        #---------------------Acelerador-----------------------------#
-        #gas = Button(self.C_inicio, image = gas_image,command = acelera,relief = FLAT)
-        #gas.image = gas_image
-        #gas.pack()
-        #gas.place(x=750, y=290)
+        #-----------------Threads necesarios--------------------------#
 
-        #------------------------Freno-------------------------------#
-        #reno = Button(self.C_inicio,image= brake_image,command=  reverse, relief = FLAT)
-        #freno.image = brake_image
-        #freno.place(x=900, y=290)
+        #Threads para encender y apagar direccionales:
 
-        #-----------------------Direccionales------------------------#
-        #izquierda = Button(self.C_inicio, image = left_dir_image,command = lambda: dir_lights(-1),relief=FLAT)
-        #izquierda.image = left_dir_image
-        #derecha = Button(self.C_inicio,image = right_dir_image,command = lambda: dir_lights(1),relief=FLAT)
-        #derecha.image = right_dir_image
-        #izquierda.place(x=10,y=100)
-        #derecha.place(x=870,y=100)
+        def thread_dir_izq(event):
+            dir_izq_thread = Thread(target= dir_lights_left, args=())
+            dir_izq_thread.start()
+        def thread_dir_der(event):
 
-        #-----------------------------Direccion----------------------#
-        #turn_left = Button(self.C_inicio, image = turn_left_image,command = lambda: turn(-1))
-        #turn_left.image = turn_left_image
-        #turn_right = Button(self.C_inicio, image = turn_right_image,command = lambda: turn(1))
-        #turn_right.image = turn_right_image
+            dir_der_thread = Thread(target=dir_lights_right, args=())
+            dir_der_thread.start()
 
-        #turn_left.place(x=200, y=200)
-        #turn_right.place(x=400, y= 200)
+        #Threads para girar, y encender las direccionales
+        def thread_turn_right(event):
+            turn_right = Thread(target=gira_derecha, args=())
+            turn_right.start()
+        def thread_turn_left(event):
+            turn_left = Thread(target = gira_izquierda,args=())
+            turn_left.start()
+
         #---------------------------Binding Events--------------------#
         self.V_inicio.bind("w",acelera) ##Acelerador, con tecla W
         self.V_inicio.bind("s",  reverse) ##Freno, con tecla S
-        self.V_inicio.bind("<Right>", gira_derecha)
-        self.V_inicio.bind("<Left>",gira_izquierda)
+        self.V_inicio.bind("<Right>", thread_turn_right)
+        self.V_inicio.bind("<Left>",thread_turn_left)
         self.V_inicio.bind("<space>", brake)
         self.V_inicio.bind("<Shift-Right>",dir_lights_right)
-        self.V_inicio.bind("<Shift-Left>", dir_lights_left)
+        self.V_inicio.bind("<Shift-Left>", thread_dir_izq)
+        self.V_inicio.bind("l", enciende_frontales)
+        self.V_inicio.bind('b', enciende_traseras)
+        self.V_inicio.bind('e', enciende_emergencia)
+        self.V_inicio.bind("<Shift-l>", enciende_all_lights)
+        self.V_inicio.bind('z',movimiento_especial)
+        self.V_inicio.bind('c', celebracion)
+
     def inicio(self):
         pass
 
