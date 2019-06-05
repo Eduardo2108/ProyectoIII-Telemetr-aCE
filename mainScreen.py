@@ -37,7 +37,7 @@ __draw__ >>> funcion que pone todo en la pantalla y la actualiza
 
 """
 
-class Ventana:
+class Test_Drive:
 
     def __init__(self, width, height):
 
@@ -67,13 +67,17 @@ class Ventana:
         imagen = PhotoImage(file=ruta)
         return imagen
 
-    def canvas_clean(self):
-        self.C_inicio.delete('all')
-
     def test_drive(self, car, driver, country, team):
+
         count = StringVar()
         count.set(0)
+
+        battery_level = StringVar()
+        battery_level.set(100)
+
         color = 'black'
+
+
         dir_state = 0 #variable que guarda estado de direccionales
         # <--- | ^  |  --->
         #  -1  | 0  |  1
@@ -82,18 +86,20 @@ class Ventana:
             if self.pwm == 1000:
                 print("velocidad maxima")
             else:
-                self.pwm += 10
-                count.set(self.pwm)
+                    self.pwm += 10
+                    count.set(self.pwm)
+                    cambiaColor()
+
+
         def reverse(event):
 
-            if self.pwm == -1000:
+            if self.pwm == -600:
                 print("reversa maxima")
             else:
-                if self.pwm <= -400:
-                    print('new color')
-                    color = 'yellow'
+
                 self.pwm-=10
                 count.set(self.pwm)
+                cambiaColor()
         def dir_lights_right():
 
             if self.dir_state == -1:
@@ -160,9 +166,11 @@ class Ventana:
             if self.pwm > 0:
                 self.pwm -= 10
                 count.set(self.pwm)
+                cambiaColor()
             elif self.pwm <0:
                 self.pwm +=10
                 count.set(self.pwm)
+                cambiaColor()
         def movimiento_especial(event):
             print("Envia movimiento especial...")
         def celebracion(event):
@@ -178,20 +186,21 @@ class Ventana:
             enciende_traseras()
             enciende_emergencia()
             print('enciende todas las luces.....')
-        #lineas guias para diseño del entorno... ''
-        #______________________________
-        #self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
-        #self.C_inicio.create_line((self.width/2),0,  (self.width /2), self.height,) #vertical
+
 
         #Etiquetas de informacion, carro, piloto...
-        marcaAuto = Label(self.C_inicio, text= str(car), font=("Arial ", 12), justify=CENTER)
-        marcaAuto.place(x=10,y=10) #Etiqueta del modelo del carro...
-        Nombre = Label(self.C_inicio, text = str(driver), font=('Arial', 12), width =9,justify= LEFT)
-        Nombre.place(x=10, y= 40)
-        Country = Label(self.C_inicio, text= str(country),font=('Arial', 12), justify=CENTER)
-        Country.place(x=110, y= 40)
-        Team = Label(self.C_inicio, text = 'Team ' + str(team),font=('Arial', 12), justify=CENTER )
-        Team.place(x=10, y =70)
+        #Etiqueta del modelo del carro...
+        marcaAuto = Label(self.C_inicio, text= 'Model: ' + str(car), font=("Arial ", 20), justify=CENTER)
+        marcaAuto.place(x=0,y=10)
+
+        Nombre = Label(self.C_inicio, text = "Driver: " +str(driver), font=("Arial", 20), width = 15,justify= LEFT)
+        Nombre.place(x=-25, y= 50)
+
+        Country = Label(self.C_inicio, text= str(country),font=('Arial', 20), justify=CENTER)
+        Country.place(x=220, y= 50)
+
+        Team = Label(self.C_inicio, text = 'Team: ' + str(team),font=('Arial', 20), justify=CENTER )
+        Team.place(x=0, y =90)
 
 
 
@@ -206,9 +215,31 @@ class Ventana:
         steer.place(x=0,y=450)
 
         #-----------------Indicador velocidad------------------------#
-        l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45),fg=color)
-        l.place(x=490,y=570)
+        speed = Label(self.C_inicio, textvariable=count,font=('Unispace', 45),fg=color)
+        speed.place(x=490,y=570)
 
+        #Funcion que cambia el color del indicador
+        def cambiaColor():
+
+            if self.pwm == 0:
+                speed.config(fg = 'green')
+
+            elif self.pwm >= 10 and self.pwm <= 490:
+                speed.config(fg= 'blue')
+
+            elif self.pwm >= 500:
+                speed.config(fg='red')
+
+            elif self.pwm <= -10 and self.pwm >= -490:
+                speed.config(fg = 'black')
+            elif self.pwm <=-500:
+                speed.config(fg='red')
+
+        #--------------------Indicador de bateria--------------------#
+        mark_battery = Label(self.C_inicio, text=' Battery Level: ',font=('Arial', 20))
+        bat_level = Label(self.C_inicio, textvariable= (battery_level), font=('Unispace', 20))
+        bat_level.place(x=950,y=0)
+        mark_battery.place(x=700,y=0)
         #-----------------Threads necesarios--------------------------#
 
         #Threads para encender y apagar direccionales:
@@ -244,15 +275,6 @@ class Ventana:
         self.V_inicio.bind('z',movimiento_especial)
         self.V_inicio.bind('c', celebracion)
 
-    def inicio(self):
-        pass
-
-    def about(self):
-        pass
-
-    def positions(self):
-        pass
-
     def __draw__(self):
 
         # Boton Home
@@ -269,6 +291,6 @@ class Ventana:
         self.V_inicio.mainloop()
 
 
-ventana = Ventana(1024,728)
+ventana = Test_Drive(1024, 728)
 ventana.__draw__()
 

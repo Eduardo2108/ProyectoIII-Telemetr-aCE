@@ -13,44 +13,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+            <state relative-caret-position="302">
+              <caret line="234" column="37" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
               <folding>
                 <element signature="e#152#1066#1" />
                 <element signature="e#1132#1777#0" />
                 <element signature="e#1823#1924#0" />
-                <element signature="e#1962#1989#0" />
-                <element signature="e#2330#2477#0" />
-                <element signature="e#2427#2477#0" />
-                <element signature="e#2518#2774#0" />
-                <element signature="e#2614#2774#0" />
-                <element signature="e#2654#2709#0" />
-                <element signature="e#2797#3499#0" />
-                <element signature="e#2847#2932#0" />
-                <element signature="e#2962#3499#0" />
-                <element signature="e#3838#4800#0" />
-                <element signature="e#3184#3266#0" />
-                <element signature="e#3996#4800#0" />
-                <element signature="e#3701#3880#0" />
-                <element signature="e#3736#3915#0" />
-                <element signature="e#3944#3986#0" />
-                <element signature="e#3866#3915#0" />
-                <element signature="e#3968#3975#0" />
-                <element signature="e#4050#4060#0" />
-                <element signature="e#4131#4138#0" />
-                <element signature="e#4209#4216#0" />
-                <element signature="e#4288#4295#0" />
-                <element signature="e#4718#4851#0" />
-                <element signature="e#4465#4508#0" />
+                <element signature="e#2221#2240#0" />
+                <element signature="e#2507#2764#0" />
+                <element signature="e#2810#3512#0" />
+                <element signature="e#2855#2940#0" />
+                <element signature="e#2975#3512#0" />
+                <element signature="e#3557#4264#0" />
+                <element signature="e#3597#3679#0" />
+                <element signature="e#3716#4264#0" />
+                <element signature="e#4305#4431#0" />
+                <element signature="e#4475#4603#0" />
+                <element signature="e#4642#4821#0" />
+                <element signature="e#4675#4725#0" />
+                <element signature="e#4772#4821#0" />
+                <element signature="e#4874#4911#0" />
+                <element signature="e#4956#4985#0" />
+                <element signature="e#5037#5064#0" />
+                <element signature="e#5115#5140#0" />
+                <element signature="e#5193#5230#0" />
+                <element signature="e#5283#5420#0" />
                 <element signature="e#7224#7254#0" />
                 <element signature="e#7772#7835#0" />
                 <element signature="e#7918#8010#0" />
                 <element signature="e#8067#8159#0" />
                 <element signature="e#8281#8352#0" />
                 <element signature="e#8402#8475#0" />
-                <element signature="e#7224#7228#0" />
-                <element signature="e#5707#5711#0" />
-                <element signature="e#5746#5750#0" />
                 <element signature="e#5785#6353#0" />
               </folding>
             </state>
@@ -146,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="440">
               <caret line="188" column="23" lean-forward="true" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
             </state>
           </provider>
@@ -155,8 +148,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="-420">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
+              <folding>
+                <element signature="e#394#458#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -380,12 +376,12 @@
       <workItem from="1559538634353" duration="2306000" />
       <workItem from="1559600961421" duration="4307000" />
       <workItem from="1559675834455" duration="5261000" />
-      <workItem from="1559708636996" duration="12498000" />
+      <workItem from="1559708636996" duration="15779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55852000" />
+    <option name="totallyTimeSpent" value="59133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -404,7 +400,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.4526167" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" visible="true" weight="0.45120227" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" visible="true" weight="0.45120227" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -450,7 +446,7 @@
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$Eduardo_Zumbado_Granados_IIIexamen.coverage" NAME="Eduardo_Zumbado_Granados_IIIexamen Coverage Results" MODIFIED="1559513278288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_5.coverage" NAME="scratch_5 Coverage Results" MODIFIED="1559513911433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1558735982286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559763591061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559768486352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TelemetryLog.coverage" NAME="TelemetryLog Coverage Results" MODIFIED="1558732865143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Proyecto_II_Taller" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1559759426558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1558733532041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
@@ -572,20 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="188" column="23" lean-forward="true" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -666,46 +648,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="e#394#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="188" column="23" lean-forward="true" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+        <state relative-caret-position="302">
+          <caret line="234" column="37" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
           <folding>
             <element signature="e#152#1066#1" />
             <element signature="e#1132#1777#0" />
             <element signature="e#1823#1924#0" />
-            <element signature="e#1962#1989#0" />
-            <element signature="e#2330#2477#0" />
-            <element signature="e#2427#2477#0" />
-            <element signature="e#2518#2774#0" />
-            <element signature="e#2614#2774#0" />
-            <element signature="e#2654#2709#0" />
-            <element signature="e#2797#3499#0" />
-            <element signature="e#2847#2932#0" />
-            <element signature="e#2962#3499#0" />
-            <element signature="e#3838#4800#0" />
-            <element signature="e#3184#3266#0" />
-            <element signature="e#3996#4800#0" />
-            <element signature="e#3701#3880#0" />
-            <element signature="e#3736#3915#0" />
-            <element signature="e#3944#3986#0" />
-            <element signature="e#3866#3915#0" />
-            <element signature="e#3968#3975#0" />
-            <element signature="e#4050#4060#0" />
-            <element signature="e#4131#4138#0" />
-            <element signature="e#4209#4216#0" />
-            <element signature="e#4288#4295#0" />
-            <element signature="e#4718#4851#0" />
-            <element signature="e#4465#4508#0" />
+            <element signature="e#2221#2240#0" />
+            <element signature="e#2507#2764#0" />
+            <element signature="e#2810#3512#0" />
+            <element signature="e#2855#2940#0" />
+            <element signature="e#2975#3512#0" />
+            <element signature="e#3557#4264#0" />
+            <element signature="e#3597#3679#0" />
+            <element signature="e#3716#4264#0" />
+            <element signature="e#4305#4431#0" />
+            <element signature="e#4475#4603#0" />
+            <element signature="e#4642#4821#0" />
+            <element signature="e#4675#4725#0" />
+            <element signature="e#4772#4821#0" />
+            <element signature="e#4874#4911#0" />
+            <element signature="e#4956#4985#0" />
+            <element signature="e#5037#5064#0" />
+            <element signature="e#5115#5140#0" />
+            <element signature="e#5193#5230#0" />
+            <element signature="e#5283#5420#0" />
             <element signature="e#7224#7254#0" />
             <element signature="e#7772#7835#0" />
             <element signature="e#7918#8010#0" />
             <element signature="e#8067#8159#0" />
             <element signature="e#8281#8352#0" />
             <element signature="e#8402#8475#0" />
-            <element signature="e#7224#7228#0" />
-            <element signature="e#5707#5711#0" />
-            <element signature="e#5746#5750#0" />
             <element signature="e#5785#6353#0" />
           </folding>
         </state>
