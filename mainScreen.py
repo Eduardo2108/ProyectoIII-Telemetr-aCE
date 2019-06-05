@@ -102,26 +102,19 @@ class Ventana:
             else:
                 self.dir_state = 1
                 print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = 0
                 print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = 1
                 print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = 0
                 print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
-                self.dir_state = 1
-                print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
-
-                self.dir_state = 0
-                print('direccional derecha: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 print('done')
         def dir_lights_left():
@@ -134,49 +127,35 @@ class Ventana:
 
                 self.dir_state = -1
                 print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = 0
                 print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = -1
                 print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
                 self.dir_state = 0
                 print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
-                self.dir_state = -1
-                print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
+                time.sleep(0.5)
 
-                self.dir_state = 0
-                print('direccional izquierda: ', self.dir_state)
-                time.sleep(0.75)
 
                 print('done')
         def gira_derecha():
             turn = 1
-            dir_state = 1
-            print('Comando dir, comando direccionales: ')
-            print(turn, dir_state)
-            time.sleep(0.2)
+            print('dir: ', turn)
+            dir_lights_right()
             turn = 0
-            dir_state = 0
-            print("comando dir:, comando direccionales: ")
-            print(turn, dir_state)
+            print('dir: ', turn)
         def gira_izquierda():
 
             turn = -1
-            dir_state = -1
-            print("comando dir:, comando direccionales: ")
-            print(turn, dir_state)
-            time.sleep(2)
+            print('dir: ' ,turn)
+            dir_lights_left()
             turn = 0
-            dir_state = 0
-            print("comando dir:, comando direccionales: ")
-            print(turn, dir_state)
+            print("dir: " , turn )
         def brake(event):
             if self.pwm > 0:
                 self.pwm -= 10
