@@ -6,6 +6,7 @@ import os
 import winsound
 import random
 from tkinter import messagebox
+from time import  sleep
 
 """
 Clase que dibuja la ventana principal
@@ -51,7 +52,7 @@ class Ventana:
         self.V_inicio.resizable(width=NO, height=NO)
 
         #Main canvas
-        self.C_inicio = Canvas(self.V_inicio, width=self.width, height=self.height, bg='white')
+        self.C_inicio = Canvas(self.V_inicio, width=self.width, height=self.height, bg='#f0f0f0')
         self.C_inicio.place(x=0, y=0)
 
         #Main menu
@@ -74,57 +75,74 @@ class Ventana:
         count.set(0)
         color = 'black'
         dir_state = 0 #variable que guarda estado de direccionales
-                                    # <--- | ^  |  --->
-                                    #  -1  | 0  |  1
-        def acelera():
+        # <--- | ^  |  --->
+        #  -1  | 0  |  1
+        def acelera(event):
 
-            if self.pwm == 1020:
+            if self.pwm == 1000:
                 print("velocidad maxima")
             else:
                 self.pwm += 10
                 count.set(self.pwm)
+        def reverse(event):
 
-        def brake(event):
-
-            if self.pwm == -1023:
+            if self.pwm == -1000:
                 print("reversa maxima")
             else:
-                if self.pwm <= -50:
+                if self.pwm <= -400:
                     print('new color')
                     color = 'yellow'
                 self.pwm-=10
                 count.set(self.pwm)
 
-        def dir_lights(new_state):
+        def dir_lights_right(event):
 
-            if new_state == 1:
-
-                if self.dir_state == -1:
+            if self.dir_state == -1:
                     self.dir_state = 0
                     print(self.dir_state)
-
-                else:
+            else:
 
                     self.dir_state = 1
                     print(self.dir_state)
-z
-            elif new_state == -1:
 
-                if self.dir_state == 1:
-                    self.dir_state = 0
-                    print(self.dir_state)
-                else:
-                    self.dir_state = -1
-                    print(self.dir_state)
+        def dir_lights_left(event):
 
-            elif new_state == 0:
+            if self.dir_state == 1:
                 self.dir_state = 0
                 print(self.dir_state)
+            else:
 
+                self.dir_state = -1
+                print(self.dir_state)
+
+        def gira_derecha(event):
+            turn = 1
+            dir_state = 1
+            print(turn, dir_state)
+            time.sleep(2)
+            turn = 0
+            dir_state = 0
+            print(turn, dir_state)
+        def gira_izquierda(event):
+
+            turn = -1
+            dir_state = -1
+            print(turn, dir_state)
+            time.sleep(2)
+            turn = 0
+            dir_state = 0
+            print(turn, dir_state)
+        def brake(event):
+            if self.pwm > 0:
+                self.pwm -= 20
+                count.set(self.pwm)
+            elif self.pwm <0:
+                self.pwm +=20
+                count.set(self.pwm)
         #lineas guias para diseño del entorno... ''
         #______________________________
-        self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
-        self.C_inicio.create_line((self.width/2),0,  (self.width /2), self.height,) #vertical
+        #self.C_inicio.create_line(0,(self.height/2),self.width,(self.height/2)) #horizontal
+        #self.C_inicio.create_line((self.width/2),0,  (self.width /2), self.height,) #vertical
 
         #Etiquetas de informacion, carro, piloto...
         marcaAuto = Label(self.C_inicio, text= str(car), font=("Arial ", 12), justify=CENTER)
@@ -142,32 +160,58 @@ z
         #   |  COMANDOS DEL CARRO    |
         #---|------------------------|
         #--------------------Carga Imagenes--------------------------#
-        gas_image = self.cargarImagen('gas.png')
-        brake_image = self.cargarImagen('brake.png')
+        #gas_image = self.cargarImagen('gas.png')
+        #brake_image = self.cargarImagen('reverse.png')
+        #left_dir_image = self.cargarImagen('left_dir.png')
+        #right_dir_image = self.cargarImagen('right_dir.png')
+        #turn_right_image = self.cargarImagen('turn_right_arrow.png')
+        #turn_left_image = self.cargarImagen('turn_left_arrow.png')
 
-        #---------------------Acelerador-----------------------------#
-        gas = Button(self.C_inicio, text='gas',command = acelera)
-        gas.place(x=750, y=430)
-
-        #------------------------Freno-------------------------------#
-        freno = Button(self.C_inicio,text='brake', command=lambda: brake(None))
-        freno.bind("<w>",brake)
-
-        freno.place(x=900, y=430)
+        #---------------Volante con medidor velocidad----------------#
+        steer_image = self.cargarImagen('bg.png')
+        steer = Label(self.C_inicio, image = steer_image)
+        steer.image = steer_image
+        steer.place(x=0,y=450)
 
         #-----------------Indicador velocidad------------------------#
         l = Label(self.C_inicio, textvariable=count,font=('Unispace', 45),fg=color)
-        l.place(x=490,y=300)
+        l.place(x=490,y=570)
+
+        #---------------------Acelerador-----------------------------#
+        #gas = Button(self.C_inicio, image = gas_image,command = acelera,relief = FLAT)
+        #gas.image = gas_image
+        #gas.pack()
+        #gas.place(x=750, y=290)
+
+        #------------------------Freno-------------------------------#
+        #reno = Button(self.C_inicio,image= brake_image,command=  reverse, relief = FLAT)
+        #freno.image = brake_image
+        #freno.place(x=900, y=290)
+
         #-----------------------Direccionales------------------------#
-        izquierda = Button(self.C_inicio, text = 'left',command = lambda: dir_lights(-1))
-        derecha = Button(self.C_inicio, text= 'derecha',command = lambda: dir_lights(1))
-        off  = Button(self.C_inicio, text= 'dir off', command = lambda: dir_lights(0))
-        izquierda.place(x=200,y=400)
-        derecha.place(x=400,y=400)
-        off.place(x=300,y=400)
+        #izquierda = Button(self.C_inicio, image = left_dir_image,command = lambda: dir_lights(-1),relief=FLAT)
+        #izquierda.image = left_dir_image
+        #derecha = Button(self.C_inicio,image = right_dir_image,command = lambda: dir_lights(1),relief=FLAT)
+        #derecha.image = right_dir_image
+        #izquierda.place(x=10,y=100)
+        #derecha.place(x=870,y=100)
 
+        #-----------------------------Direccion----------------------#
+        #turn_left = Button(self.C_inicio, image = turn_left_image,command = lambda: turn(-1))
+        #turn_left.image = turn_left_image
+        #turn_right = Button(self.C_inicio, image = turn_right_image,command = lambda: turn(1))
+        #turn_right.image = turn_right_image
 
-
+        #turn_left.place(x=200, y=200)
+        #turn_right.place(x=400, y= 200)
+        #---------------------------Binding Events--------------------#
+        self.V_inicio.bind("w",acelera) ##Acelerador, con tecla W
+        self.V_inicio.bind("s",  reverse) ##Freno, con tecla S
+        self.V_inicio.bind("<Right>", gira_derecha)
+        self.V_inicio.bind("<Left>",gira_izquierda)
+        self.V_inicio.bind("<space>", brake)
+        self.V_inicio.bind("<Shift-Right>",dir_lights_right)
+        self.V_inicio.bind("<Shift-Left>", dir_lights_left)
     def inicio(self):
         pass
 

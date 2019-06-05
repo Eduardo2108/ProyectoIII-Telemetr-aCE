@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/mainScreen.py" line="116" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="422bd434-ab8c-43d4-997e-38e0d023e0c2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,86 +13,52 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-              <folding>
-                <element signature="e#2127#2274#0" />
-                <element signature="e#2507#2763#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+            <state relative-caret-position="160">
+              <caret line="213" column="58" selection-start-line="213" selection-start-column="58" selection-end-line="213" selection-end-column="58" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#974#1579#0" />
-                <element signature="e#1121#1579#0" />
-                <element signature="e#1138#1504#0" />
-                <element signature="e#1310#1344#0" />
-                <element signature="e#1394#1430#0" />
-                <element signature="e#1636#1746#0" />
-                <element signature="e#1802#1840#0" />
-                <element signature="e#1880#3096#0" />
-                <element signature="e#2039#3096#0" />
-                <element signature="e#2056#3021#0" />
-                <element signature="e#2226#2365#0" />
-                <element signature="e#2417#2559#0" />
-                <element signature="e#2606#2993#0" />
-                <element signature="e#2642#2796#0" />
-                <element signature="e#2839#2993#0" />
-                <element signature="e#3155#3264#0" />
-                <element signature="e#3322#3364#0" />
-                <element signature="e#3385#3412#0" />
-                <element signature="e#3434#3463#0" />
-                <element signature="e#3465#3523#0" />
-                <element signature="e#4145#4195#0" />
-                <element signature="e#4283#4333#0" />
-                <element signature="e#4420#4535#0" />
-                <element signature="e#5149#5261#0" />
-                <element signature="e#5309#5412#0" />
-                <element signature="e#5489#5592#0" />
-                <element signature="e#5626#5734#0" />
-                <element signature="e#5846#6530#0" />
-                <element signature="e#5863#6451#0" />
-                <element signature="e#6620#7085#0" />
-                <element signature="e#6637#7007#0" />
-                <element signature="e#6715#6737#0" />
-                <element signature="e#6785#6795#0" />
-                <element signature="e#7187#7430#0" />
-                <element signature="e#7204#7353#0" />
-                <element signature="e#7435#7470#0" />
-                <element signature="e#8187#8212#0" />
-                <element signature="e#8585#11877#0" />
-                <element signature="e#9817#9864#0" />
-                <element signature="e#9952#9995#0" />
-                <element signature="e#10082#10190#0" />
-                <element signature="e#10243#10411#0" />
-                <element signature="e#10906#10977#0" />
-                <element signature="e#11125#11286#0" />
-                <element signature="e#11374#11712#0" />
-                <element signature="e#11391#11635#0" />
-                <element signature="e#11959#14971#0" />
-                <element signature="e#13551#13615#0" />
-                <element signature="e#13646#13725#0" />
-                <element signature="e#13910#13915#0" />
-                <element signature="e#14135#14176#0" />
-                <element signature="e#14262#14307#0" />
-                <element signature="e#14390#14496#0" />
+                <element signature="e#2330#2477#0" />
+                <element signature="e#2518#2774#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#94#158#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="188" column="23" lean-forward="true" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -133,14 +96,17 @@
         <option value="$PROJECT_DIR$/../../Eduardo_Zumbado_Granados_IIIexamen.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py" />
         <option value="$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py" />
+        <option value="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py" />
+        <option value="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
         <option value="$PROJECT_DIR$/mainScreen.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,28 +141,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.mainScreen">
-    <configuration name="Eduardo_Zumbado_Granados_IIIexamen" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ProyectoIII-TelemetriaCE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Eduardo_Zumbado_Granados_IIIexamen.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Interfaz_Eduardo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProyectoIII-TelemetriaCE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -282,13 +226,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ProyectoIII-TelemetriaCE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.mainScreen" />
+        <item itemvalue="Python.scratch_7" />
         <item itemvalue="Python.mainScreen" />
         <item itemvalue="Python.scratch_6" />
         <item itemvalue="Python.Interfaz_Eduardo" />
-        <item itemvalue="Python.scratch_5" />
       </list>
     </recent_temporary>
   </component>
@@ -314,15 +280,17 @@
       <workItem from="1559530442353" duration="4239000" />
       <workItem from="1559538634353" duration="2306000" />
       <workItem from="1559600961421" duration="4307000" />
-      <workItem from="1559675834455" duration="4905000" />
+      <workItem from="1559675834455" duration="5261000" />
+      <workItem from="1559708636996" duration="9463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42998000" />
+    <option name="totallyTimeSpent" value="52817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25268096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -337,7 +305,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.4526167" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" weight="0.4520202" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" visible="true" weight="0.45120227" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -346,7 +314,8 @@
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" auto_hide="true" id="SciView" order="6" show_stripe_button="false" type="FLOATING" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="7" side_tool="true" weight="0.3297587" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25268096" />
@@ -361,8 +330,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.39886847" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49932975" visible="true" weight="0.4526167" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.4526167" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" visible="true" weight="0.45120227" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -371,7 +340,8 @@
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" auto_hide="true" id="SciView" order="6" show_stripe_button="false" type="FLOATING" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="7" side_tool="true" weight="0.3297587" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,8 +351,9 @@
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$Eduardo_Zumbado_Granados_IIIexamen.coverage" NAME="Eduardo_Zumbado_Granados_IIIexamen Coverage Results" MODIFIED="1559513278288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_5.coverage" NAME="scratch_5 Coverage Results" MODIFIED="1559513911433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1558735982286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559679353905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559759719477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TelemetryLog.coverage" NAME="TelemetryLog Coverage Results" MODIFIED="1558732865143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Proyecto_II_Taller" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1559759426558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1558733532041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$Interfaz_Eduardo.coverage" NAME="Interfaz_Eduardo Coverage Results" MODIFIED="1559605047141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_6.coverage" NAME="scratch_6 Coverage Results" MODIFIED="1559676986546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
@@ -405,17 +376,6 @@
           <caret line="211" column="11" selection-start-line="211" selection-start-column="11" selection-end-line="211" selection-end-column="11" />
           <folding>
             <element signature="e#0#303#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#94#158#0" expanded="true" />
-            <element signature="e#417#466#0" />
           </folding>
         </state>
       </provider>
@@ -508,81 +468,60 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        <state relative-caret-position="-60">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="300">
           <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#974#1579#0" />
-            <element signature="e#1121#1579#0" />
-            <element signature="e#1138#1504#0" />
-            <element signature="e#1310#1344#0" />
-            <element signature="e#1394#1430#0" />
-            <element signature="e#1636#1746#0" />
-            <element signature="e#1802#1840#0" />
-            <element signature="e#1880#3096#0" />
-            <element signature="e#2039#3096#0" />
-            <element signature="e#2056#3021#0" />
-            <element signature="e#2226#2365#0" />
-            <element signature="e#2417#2559#0" />
-            <element signature="e#2606#2993#0" />
-            <element signature="e#2642#2796#0" />
-            <element signature="e#2839#2993#0" />
-            <element signature="e#3155#3264#0" />
-            <element signature="e#3322#3364#0" />
-            <element signature="e#3385#3412#0" />
-            <element signature="e#3434#3463#0" />
-            <element signature="e#3465#3523#0" />
-            <element signature="e#4145#4195#0" />
-            <element signature="e#4283#4333#0" />
-            <element signature="e#4420#4535#0" />
-            <element signature="e#5149#5261#0" />
-            <element signature="e#5309#5412#0" />
-            <element signature="e#5489#5592#0" />
-            <element signature="e#5626#5734#0" />
-            <element signature="e#5846#6530#0" />
-            <element signature="e#5863#6451#0" />
-            <element signature="e#6620#7085#0" />
-            <element signature="e#6637#7007#0" />
-            <element signature="e#6715#6737#0" />
-            <element signature="e#6785#6795#0" />
-            <element signature="e#7187#7430#0" />
-            <element signature="e#7204#7353#0" />
-            <element signature="e#7435#7470#0" />
-            <element signature="e#8187#8212#0" />
-            <element signature="e#8585#11877#0" />
-            <element signature="e#9817#9864#0" />
-            <element signature="e#9952#9995#0" />
-            <element signature="e#10082#10190#0" />
-            <element signature="e#10243#10411#0" />
-            <element signature="e#10906#10977#0" />
-            <element signature="e#11125#11286#0" />
-            <element signature="e#11374#11712#0" />
-            <element signature="e#11391#11635#0" />
-            <element signature="e#11959#14971#0" />
-            <element signature="e#13551#13615#0" />
-            <element signature="e#13646#13725#0" />
-            <element signature="e#13910#13915#0" />
-            <element signature="e#14135#14176#0" />
-            <element signature="e#14262#14307#0" />
-            <element signature="e#14390#14496#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="188" column="23" lean-forward="true" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#94#158#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainScreen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        <state relative-caret-position="160">
+          <caret line="213" column="58" selection-start-line="213" selection-start-column="58" selection-end-line="213" selection-end-column="58" />
           <folding>
-            <element signature="e#2127#2274#0" />
-            <element signature="e#2507#2763#0" />
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#2330#2477#0" />
+            <element signature="e#2518#2774#0" />
           </folding>
         </state>
       </provider>
