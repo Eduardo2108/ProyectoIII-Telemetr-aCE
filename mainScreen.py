@@ -8,13 +8,16 @@ import random
 from tkinter import messagebox
 from time import  sleep
 
+
+from WiFiClient import NodeMCU
+
 """
-Clase que dibuja la ventana principal
+Clase que dibuja la ventana test drive 
 
 Atributos:
+
 height(entrada)>>> int, valor del alto de la ventana a crear
 width(entrada)>>> int, valor del ancho de la ventana a crear
-
 V_inicio >>> atributo que tiene como valor una instancia de ventana en tkinter
 V_inicio.title >>> nombre de la ventana (titulo)
 V_inicio >>> medidas de la ventana
@@ -36,6 +39,28 @@ inicio >>> dibuja la ventana principal
 __draw__ >>> funcion que pone todo en la pantalla y la actualiza
 
 """
+myCar = NodeMCU()
+myCar.start()
+
+
+def get_log():
+    indice = 0
+    while (myCar.loop):
+        while (indice < len(myCar.log)):
+            mnsSend = "[{0}] cmd: {1}\n".format(indice, myCar.log[indice][0])
+            SentCarScrolledTxt.insert(END, mnsSend)
+            SentCarScrolledTxt.see("end")
+
+            mnsRecv = "[{0}] result: {1}\n".format(indice, myCar.log[indice][1])
+            RevCarScrolledTxt.insert(END, mnsRecv)
+            RevCarScrolledTxt.see('end')
+
+            indice += 1
+        time.sleep(0.200)
+
+p = Thread(target=get_log)
+p.start()
+
 
 class Test_Drive:
 
@@ -74,11 +99,9 @@ class Test_Drive:
 
         battery_level = StringVar()
         battery_level.set(100)
-
         color = 'black'
-
-
         dir_state = 0 #variable que guarda estado de direccionales
+
         # <--- | ^  |  --->
         #  -1  | 0  |  1
         def acelera(event):
@@ -86,11 +109,9 @@ class Test_Drive:
             if self.pwm == 1000:
                 print("velocidad maxima")
             else:
-                    self.pwm += 10
-                    count.set(self.pwm)
-                    cambiaColor()
-
-
+                self.pwm += 10
+                count.set(self.pwm)
+                cambiaColor()
         def reverse(event):
 
             if self.pwm == -600:
@@ -103,8 +124,8 @@ class Test_Drive:
         def dir_lights_right():
 
             if self.dir_state == -1:
-                    self.dir_state = 0
-                    print('direccional derecha: ', self.dir_state)
+                self.dir_state = 0
+                print('direccional derecha: ', self.dir_state)
             else:
                 self.dir_state = 1
                 print('direccional derecha: ', self.dir_state)
@@ -182,9 +203,9 @@ class Test_Drive:
         def enciende_emergencia(event):
             print("enciende ambas direccionales")
         def enciende_all_lights(event):
-            enciende_frontales()
-            enciende_traseras()
-            enciende_emergencia()
+            enciende_frontales(event)
+            enciende_traseras(event)
+            enciende_emergencia(event)
             print('enciende todas las luces.....')
 
 
@@ -260,6 +281,39 @@ class Test_Drive:
             turn_left = Thread(target = gira_izquierda,args=())
             turn_left.start()
 
+        #------------------Boton ayuda--------------------------------#
+
+
+        def ayuda():
+            Ayuda = Canvas(self.V_inicio, width = 400, height=600, bg='white')
+            Ayuda.place(x=300, y= 50)
+
+            Ayuda.create_text(200,20,text = 'How to drive ?',font=('Unispace', 20))
+
+            Ayuda.create_text(200, 80, text='Movement:', font=('Unispace', 14))
+            Ayuda.create_text(120, 140, text= ' Forward: W\n Reverse: s\n Brake: Space Bar', font=('Unispace', 12))
+
+            Ayuda.create_text(200, 200,text= 'Direction:', font=('Unispace', 14))
+            Ayuda.create_text(140,250, text='Right: Right arrow\nLeft: Left arrow', font=('Unispace',12))
+
+            Ayuda.create_text(200, 300, text='Turn lights,¡Keep Shift down!:', font=('Unispace', 14))
+            Ayuda.create_text(140,350, text='Left: Left arrow \n Right: Right arrow', font=("Unispace", 12))
+
+            Ayuda.create_text(200, 450, text='Other lights: ', font=('Unispace', 14))
+            Ayuda.create_text(140, 500, text=' Front: press l \n Back: press b \n Emergency: press e \n All: press a', font=("Unispace", 12))
+
+
+            def exit():
+                Ayuda.destroy()
+            exit_button = Button(Ayuda, bitmap = 'error', command=exit)
+            exit_button.place(x=380,y=580)
+
+
+
+
+
+        botton_help = Button(self.C_inicio, bitmap= 'question', relief = FLAT, command= ayuda)
+        botton_help.place(x=1000, y=695)
         #---------------------------Binding Events--------------------#
         self.V_inicio.bind("w",acelera) ##Acelerador, con tecla W
         self.V_inicio.bind("s",  reverse) ##Freno, con tecla S
@@ -271,7 +325,7 @@ class Test_Drive:
         self.V_inicio.bind("l", enciende_frontales)
         self.V_inicio.bind('b', enciende_traseras)
         self.V_inicio.bind('e', enciende_emergencia)
-        self.V_inicio.bind("<Shift-l>", enciende_all_lights)
+        self.V_inicio.bind("p", enciende_all_lights)
         self.V_inicio.bind('z',movimiento_especial)
         self.V_inicio.bind('c', celebracion)
 
