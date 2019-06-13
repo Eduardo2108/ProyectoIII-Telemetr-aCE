@@ -1,60 +1,47 @@
 from tkinter import *
 from threading import Thread
-import threading
 import time
 import os
-import winsound
-import random
-from tkinter import messagebox
-from time import  sleep
-
+from time import sleep
 
 from WiFiClient import NodeMCU
+
 
 """
 Clase que dibuja la ventana test drive 
 
 Atributos:
+height  = int, alto de ventana
+width = int, ancho de ventana
 
-height(entrada)>>> int, valor del alto de la ventana a crear
-width(entrada)>>> int, valor del ancho de la ventana a crear
-V_inicio >>> atributo que tiene como valor una instancia de ventana en tkinter
-V_inicio.title >>> nombre de la ventana (titulo)
-V_inicio >>> medidas de la ventana
-V_inicio.resizable >>> control sobre el cambio de tamano de la ventana
+V_test = instancia de Tk()
+v_test.tittle = titulo de la ventana
+v_test.resizable = configuracion del tamaño  de la ventana
 
-C_inicio >>> canvas principal
+C_test = canvas para dibujar
+C_test.place = configuracion del lugar del canvas
 
-cinta_opciones >>> menu en la ventana
-V_inicio.config >>> configuracion de la ventana, para el menu.
+****Variables para controlar el carro****
+pwm = motor
+lf = luces frontales
+lb = lucer traseras
+ld = direccional derecha
+li = direccional izquierda
+le = direccionales de emergencia
+
+**** Configuracion del carro ****
+myCar = instancia de NodeMCU()
+myCar.start = crea conexion
 
 Metodos:
-__draw__ >>> funcion que dibuja todo lo necesario para la pantalla de pruebas
+
+cargarImagen = cargar imagenes mas facilmente
+
+__draw__ dibuja la ventana, con todos los componentes
+
+
 
 """
-myCar = NodeMCU()
-myCar.start()
-
-
-def get_log():
-    indice = 0
-    while (myCar.loop):
-        while (indice < len(myCar.log)):
-            mnsSend = "[{0}] cmd: {1}\n".format(indice, myCar.log[indice][0])
-            SentCarScrolledTxt.insert(END, mnsSend)
-            SentCarScrolledTxt.see("end")
-
-            mnsRecv = "[{0}] result: {1}\n".format(indice, myCar.log[indice][1])
-            RevCarScrolledTxt.insert(END, mnsRecv)
-            RevCarScrolledTxt.see('end')
-
-            indice += 1
-        time.sleep(0.200)
-
-
-p = Thread(target=get_log)
-
-
 
 class Test_Drive:
 
@@ -76,31 +63,35 @@ class Test_Drive:
 
         #Configuracion del carro, variables necesarias
         self.pwm = 0
-        self.dir_state = 0
+
         self.lf = 0
         self.lb = 0
         self.ld = 0
-
+        self.li = 0
+        self.le = 0
+        self.dir_state = 0
+        self.direccion = 0
+        # ------------------Instancia del carro-------------------#
+        self.myCar = NodeMCU()
+        self.myCar.start()
+    #Funcion que carga las imagenes a Tkinter
     def cargarImagen(self, nombre):
         ruta = os.path.join('resources', nombre)
         imagen = PhotoImage(file=ruta)
         return imagen
-
+    #Funcion que dibuja en la ventana
     def __draw__(self, car, driver, country, team):
+        #Configuraciones del carro
         aceleracion = 100
+        #Configuracion del velocimetro
         count = StringVar()
         count.set(0)
-
+        #Configuracion del medidor de bateria
         battery_level = StringVar()
         battery_level.set(100)
         color = 'black'
 
-        dir_state = 0 #variable que guarda estado de direccionales
-
-        # <--- | ^  |  --->
-        #  -1  | 0  |  1
-
-        #YA ENVIAA
+        #Funcion que aumenta la velocidad
         def acelera(event): #YA ENVIA COMANDOS
 
             if self.pwm == 1000:
@@ -109,193 +100,207 @@ class Test_Drive:
                 self.pwm += aceleracion
                 count.set(self.pwm)
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
-                myCar.send(msg)
+                self.myCar.send(msg)
                 cambiaColor()
                 print('comando enviado: ', msg)
-        #YA ENVIA
+        #Funcion que disminuye la velocidad y hace reversa
         def reverse(event): #YA ENVIA COMANDOS
 
-            if self.pwm == -600:
+            if self.pwm == -800:
                 print("reversa maxima")
             else:
 
                 self.pwm-=aceleracion
                 count.set(self.pwm)
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
-                myCar.send(msg)
-                print('comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('comando enviado: ', msg)
                 cambiaColor()
-        #YA ENIVIA
+        #Funcion que enciende direcionales derechas
         def dir_lights_right(): #YA ENVIA COMANDOS
 
             if self.dir_state == -1:
                 self.dir_state = 0
                 msg = 'lr: 0;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
 
 
             else:
 
                 self.dir_state = 1
                 msg = 'lr:1;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = 0
                 msg = 'lr:0;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = 1
                 msg = 'lr:1;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = 0
                 msg = 'lr:0;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
 
                 time.sleep(0.5)
 
-                print('done')
-        #YA ENVIA
+                #print('done')
+        #Funcion que enciende direccionales izquierdas
         def dir_lights_left(): #YA ENVIA COMANDOS
 
             if self.dir_state == 1:
                 self.dir_state = 0
-                print('comando direccionales: ',self.dir_state)
+               # print('comando direccionales: ',self.dir_state)
 
             else:
 
                 self.dir_state = -1
                 msg = 'll:1;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = 0
                 msg = 'll:0;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = -1
                 msg = 'll:1;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
                 time.sleep(0.5)
 
                 self.dir_state = 0
                 msg = 'll:0;'
-                myCar.send(msg)
-                print('Comando enviado: ', msg)
+                self.myCar.send(msg)
+                #print('Comando enviado: ', msg)
 
 
 
                 time.sleep(0.5)
 
 
-                print('done')
-        #YA ENVIA
+                #print('done')
+        #Funcion que gira a la derecha
         def gira_derecha():
-            turn = 1
-            msg = 'dir:1;'
-            myCar.send(msg)
-            print('Comando giro enviado: ',msg)
+            if self.direccion == 0:
+                self.direccion = 1
+                dir_lights_right()
+                msg = 'dir:1;'
+                self.myCar.send(msg)
+                print('Comando giro enviado: ', msg)
+                time.sleep(2)
+            else:
+                self.direccion=0
+                msg = 'dir:0;'
+                self.myCar.send(msg)
+                print('Comando giro enviado: ', msg)
 
-            dir_lights_right()
-            msg = 'dir:0;'
-            myCar.send(msg)
-            print('Comando giro enviado: ', msg)
+        #Funcion que gira a la izquierda
 
-            turn = 0
-        #YA ENVIA
         def gira_izquierda():
+            if self.direccion == 0:
+                self.direccion = -1
+                dir_lights_left()
+                msg = 'dir:-1;'
+                self.myCar.send(msg)
+                print('Comando giro enviado: ', msg)
+                time.sleep(2)
+            else:
+                self.direccion = 0
+                msg = 'dir:0;'
+                self.myCar.send(msg)
+                print('Comando giro enviado: ', msg)
+            #msg = 'dir:0;'
+            #self.myCar.send(msg)
+            #print('Comando giro enviado: ', msg)
 
-            turn = -1
-            msg = 'dir:-1;'
-            myCar.send(msg)
-            print('Comando giro enviado: ', msg)
-
-            dir_lights_left()
-            msg = 'dir:0;'
-            myCar.send(msg)
-            print('Comando giro enviado: ', msg)
-
-            turn = 0
-        #YA ENVIA
+        #Funcion que frena el carro
         def brake(event):
             if self.pwm > 0:
                 self.pwm -= 50
                 count.set(self.pwm)
+                print(count)
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
-                myCar.send(msg)
+                self.myCar.send(msg)
                 print('comando enviado: ', msg)
                 cambiaColor()
             elif self.pwm <0:
                 self.pwm +=50
                 count.set(self.pwm)
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
-                myCar.send(msg)
+                self.myCar.send(msg)
                 print('comando enviado: ', msg)
                 cambiaColor()
-        #====================FALTA DEFINIR=============#
-        def movimiento_especial(event):
-            print("Envia movimiento especial...")
-        #====================FALTA DEFINIR=============#
-        def celebracion(event):
-            print("Envia celebracion...")
 
-        #YA ENVIA
+        #===================Celebracion==============#
+        #enciende y apaga las luces de emergencia, a manera de burla a los perdedores
+        def celebracion(event):
+            enciende_emergencia(event)
+            time.sleep(0.5)
+            enciende_emergencia(event)
+            time.sleep(0.5)
+            enciende_emergencia(event)
+            time.sleep(0.5)
+            enciende_emergencia(event)
+            time.sleep(0.5)
+            enciende_emergencia(event)
+            time.sleep(0.5)
+            enciende_emergencia(event)
+            time.sleep(0.5)
+        #Funcion que enciende luces frontales
         def enciende_frontales(event):
             if self.lf == 0:
-                myCar.send('lf:1;')
+                self.myCar.send('lf:1;')
                 print('Comando enviado: ', 'lf:1;')
                 self.lf = 1
             else:
-                myCar.send('lf:0;')
+                self.myCar.send('lf:0;')
                 print('Comando enviado: ', 'lf:0;')
                 self.lf = 0
-        #YA ENVIA
+        #Funicion que enciende luces traseras
         def enciende_traseras(event):
             if self.lb == 0:
-                myCar.send('lb:1;')
+                self.myCar.send('lb:1;')
                 print('Comando enviado: ', 'lb:1;')
                 self.lb = 1
             else:
-                myCar.send('lb:0;')
+                self.myCar.send('lb:0;')
                 print('Comando enviado: ', 'lb:0;')
                 self.lb = 0
-        #YA ENVIA
+        #Funcion que enciende luces de emergencia
         def enciende_emergencia(event):
-            if self.ld == 0:
-                myCar.send('ll:1;')
-                myCar.send('lr:1;')
-                print('Comando enviado: ', 'lf:1;', 'lr:1;')
-                self.ld = 1
+            if self.le == 0:
+                self.myCar.send('le:1;')
+                self.le = 1
             else:
-                myCar.send('ll:0;')
-                myCar.send('lr:0;')
-                print('Comando enviado: ', 'll:0;', 'lr:0;')
-                self.ld = 0
-        #YA ENVIA
-        def enciende_all_lights(event):
-            enciende_frontales(event)
-            enciende_traseras(event)
-            enciende_emergencia(event)
-            print('enciende todas las luces.....')
-
+                self.myCar.send('le:0;')
+                self.le = 0
+        #Funcion que lee la bateria
         def read_battery():
 
-            level = myCar.readById('blvl')
-            battery_level.set(level)
+            level = self.myCar.send('sense;')
+            btry = self.myCar.readById(level)
+            print ('lvl: ', btry)
+            battery_level.set(btry )
             print('Bateria actualizada..')
+            time.sleep(0.5)
 
+        #def updateBattery():
+        #thread_battery = Threaed(target= read_battery, args=())
+        #thread_battery.start()
+        #updateBattery()
         #Etiquetas de informacion, carro, piloto...
         #Etiqueta del modelo del carro.
         marcaAuto = Label(self.C_test, text='Model: ' + str(car), font=("Arial ", 20), justify=CENTER)
@@ -401,13 +406,11 @@ class Test_Drive:
         self.V_test.bind("<Right>", thread_turn_right)
         self.V_test.bind("<Left>", thread_turn_left)
         self.V_test.bind("<space>", brake)
-        self.V_test.bind("<Shift-Right>", dir_lights_right)
+        self.V_test.bind("<Shift-Right>", thread_dir_der)
         self.V_test.bind("<Shift-Left>", thread_dir_izq)
         self.V_test.bind("l", enciende_frontales)
         self.V_test.bind('b', enciende_traseras)
         self.V_test.bind('e', enciende_emergencia)
-        self.V_test.bind("a", enciende_all_lights)
-        self.V_test.bind('z', movimiento_especial)
         self.V_test.bind('c', celebracion)
 
 
@@ -415,6 +418,7 @@ class Test_Drive:
 
 
 
-ventana = Test_Drive()
-ventana.__draw__('Ferrari 458', 'Eduardo', 'CRC', 'Red Bull')
 
+
+ventana  = Test_Drive()
+ventana.__draw__('mercedes','Eduardo','CRC','Red Bull')

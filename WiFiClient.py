@@ -43,7 +43,7 @@ class NodeMCU(Thread):
     error = False               #Variable para saber si el último mensaje fue erroneo
     interval = 0.100            #Intervalo para escribir nuevos mensajes
     loop = False                #Variable que controla el loop infinito
-    timeoutLimit = 3       #Tiempo de espera por la respuesta.
+    timeoutLimit = 0.5           #Tiempo de espera por la respuesta.
     
     
     #           ___________________________           

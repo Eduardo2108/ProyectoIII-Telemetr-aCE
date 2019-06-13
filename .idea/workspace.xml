@@ -11,47 +11,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mainScreen.py">
+        <entry file="file://$PROJECT_DIR$/TestScreen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="358" column="27" selection-start-line="358" selection-start-column="27" selection-end-line="358" selection-end-column="27" />
+            <state relative-caret-position="201">
+              <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
               <folding>
-                <element signature="e#152#1066#1" />
-                <element signature="e#1178#1747#0" />
-                <element signature="e#1324#1747#0" />
-                <element signature="e#1368#1721#0" />
-                <element signature="e#1823#1924#0" />
-                <element signature="e#2221#2240#0" />
-                <element signature="e#2549#2867#0" />
-                <element signature="e#2628#2840#0" />
-                <element signature="e#2929#3244#0" />
-                <element signature="e#2644#2722#0" />
-                <element signature="e#3389#4323#0" />
-                <element signature="e#3383#3488#0" />
-                <element signature="e#4326#5231#0" />
-                <element signature="e#3597#3679#0" />
-                <element signature="e#5324#5520#0" />
-                <element signature="e#5575#5845#0" />
-                <element signature="e#4600#4839#0" />
-                <element signature="e#4760#4839#0" />
-                <element signature="e#6918#7184#0" />
-                <element signature="e#7220#7486#0" />
-                <element signature="e#7539#7805#0" />
-                <element signature="e#5283#5420#0" />
-                <element signature="e#8901#10095#0" />
-                <element signature="e#9980#9995#0" />
-                <element signature="e#6651#7077#0" />
-                <element signature="e#8402#8475#0" />
+                <element signature="e#5913#6455#0" />
+                <element signature="e#6642#7031#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -59,11 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WiFiClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2540">
-              <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-              <folding>
-                <element signature="e#392#420#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="141">
+              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -71,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+            <state relative-caret-position="380">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="e#394#458#0" expanded="true" />
               </folding>
@@ -93,7 +57,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/mainScreen.py" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
@@ -115,15 +78,17 @@
         <option value="$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI/Interfaz_Eduardo.py" />
         <option value="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/WiFiClient.py" />
         <option value="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py" />
-        <option value="$PROJECT_DIR$/WiFiClient.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py" />
         <option value="$PROJECT_DIR$/mainScreen.py" />
+        <option value="$PROJECT_DIR$/WiFiClient.py" />
+        <option value="$PROJECT_DIR$/TestScreen.py" />
+        <option value="$PROJECT_DIR$/../../prograIII, parte José_~/Proyecto III/FormulaE.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="141" />
-    <option name="y" value="52" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="140" />
+    <option name="y" value="50" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -159,7 +124,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mainScreen">
+  <component name="RunManager" selected="Python.Python">
+    <configuration name="Python" type="PythonConfigurationType" factoryName="Python">
+      <module name="ProyectoIII-TelemetriaCE" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestScreen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TelemetryLog" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProyectoIII-TelemetriaCE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,6 +173,9 @@
       <module name="ProyectoIII-TelemetriaCE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -195,28 +185,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mainScreen.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ProyectoIII-TelemetriaCE" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -267,13 +235,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Python" />
+      <item itemvalue="Python.mainScreen" />
+      <item itemvalue="Python.scratch_6" />
+      <item itemvalue="Python.scratch_7" />
+      <item itemvalue="Python.TelemetryLog" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mainScreen" />
         <item itemvalue="Python.TelemetryLog" />
+        <item itemvalue="Python.mainScreen" />
         <item itemvalue="Python.scratch_7" />
         <item itemvalue="Python.mainScreen" />
-        <item itemvalue="Python.scratch_6" />
       </list>
     </recent_temporary>
   </component>
@@ -301,21 +275,26 @@
       <workItem from="1559600961421" duration="4307000" />
       <workItem from="1559675834455" duration="5261000" />
       <workItem from="1559708636996" duration="31219000" />
+      <workItem from="1560101015182" duration="25000" />
+      <workItem from="1560395430846" duration="27000" />
+      <workItem from="1560395462247" duration="9299000" />
+      <workItem from="1560462943712" duration="2777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74573000" />
+    <option name="totallyTimeSpent" value="86701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25268096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.39886847" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.42149928" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -323,7 +302,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.4526167" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" visible="true" weight="0.45120227" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49865952" weight="0.45120227" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -332,7 +311,7 @@
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" auto_hide="true" id="SciView" order="6" show_stripe_button="false" type="FLOATING" />
+      <window_info anchor="right" id="SciView" order="6" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="7" side_tool="true" weight="0.3297587" />
     </layout>
     <layout-to-restore>
@@ -370,12 +349,13 @@
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_5.coverage" NAME="scratch_5 Coverage Results" MODIFIED="1559513911433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1558735982286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$mainScreen.coverage" NAME="mainScreen Coverage Results" MODIFIED="1559812594174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TelemetryLog.coverage" NAME="TelemetryLog Coverage Results" MODIFIED="1559802171003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TelemetryLog.coverage" NAME="TelemetryLog Coverage Results" MODIFIED="1560460919713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1559759426558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1558733532041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$Interfaz_Eduardo.coverage" NAME="Interfaz_Eduardo Coverage Results" MODIFIED="1559605047141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../SEMESTRE I 2019/Eduardo Zumbado_GUI/Eduardo Zumbado_GUI" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch_6.coverage" NAME="scratch_6 Coverage Results" MODIFIED="1559676986546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1558732077901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/ProyectoIII_TelemetriaCE$TestScreen.coverage" NAME="TestScreen Coverage Results" MODIFIED="1560467086797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
@@ -445,13 +425,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cars.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -561,16 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
-          <folding>
-            <element signature="e#394#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mainScreen.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_7.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -578,47 +543,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WiFiClient.py">
+    <entry file="file://$PROJECT_DIR$/../../Formula CE/FormulaE_CE_TEC--master/TelemetryLog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2540">
-          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        <state relative-caret-position="380">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding>
-            <element signature="e#392#420#0" expanded="true" />
+            <element signature="e#394#458#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainScreen.py">
+    <entry file="file://$PROJECT_DIR$/WiFiClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="358" column="27" selection-start-line="358" selection-start-column="27" selection-end-line="358" selection-end-column="27" />
+        <state relative-caret-position="141">
+          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../prograIII, parte José_~/Proyecto III/FormulaE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
           <folding>
-            <element signature="e#152#1066#1" />
-            <element signature="e#1178#1747#0" />
-            <element signature="e#1324#1747#0" />
-            <element signature="e#1368#1721#0" />
-            <element signature="e#1823#1924#0" />
-            <element signature="e#2221#2240#0" />
-            <element signature="e#2549#2867#0" />
-            <element signature="e#2628#2840#0" />
-            <element signature="e#2929#3244#0" />
-            <element signature="e#2644#2722#0" />
-            <element signature="e#3389#4323#0" />
-            <element signature="e#3383#3488#0" />
-            <element signature="e#4326#5231#0" />
-            <element signature="e#3597#3679#0" />
-            <element signature="e#5324#5520#0" />
-            <element signature="e#5575#5845#0" />
-            <element signature="e#4600#4839#0" />
-            <element signature="e#4760#4839#0" />
-            <element signature="e#6918#7184#0" />
-            <element signature="e#7220#7486#0" />
-            <element signature="e#7539#7805#0" />
-            <element signature="e#5283#5420#0" />
-            <element signature="e#8901#10095#0" />
-            <element signature="e#9980#9995#0" />
-            <element signature="e#6651#7077#0" />
-            <element signature="e#8402#8475#0" />
+            <element signature="e#5913#6455#0" />
+            <element signature="e#6642#7031#0" />
           </folding>
         </state>
       </provider>
