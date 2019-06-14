@@ -94,7 +94,7 @@ class Test_Drive:
         count.set(0)
         #Configuracion del medidor de bateria
         battery_level = StringVar()
-        battery_level.set(100)
+        battery_level.set(0)
         color = 'black'
 
         #Funcion que aumenta la velocidad
@@ -165,7 +165,7 @@ class Test_Drive:
 
             if self.dir_state == 1:
                 self.dir_state = 0
-               # print('comando direccionales: ',self.dir_state)
+            # print('comando direccionales: ',self.dir_state)
 
             else:
 
@@ -291,12 +291,12 @@ class Test_Drive:
                 self.le = 0
         #Funcion que lee la bateria
         def read_battery():
-
-            level = self.myCar.send('sense;')
-            btry = self.myCar.readById(level)
-            print ('lvl: ', btry)
-            battery_level.set(btry )
-            print('Bateria actualizada..')
+            while True:
+                level = self.myCar.send("sense;")
+                #print(self.myCar.read())
+                time.sleep(2)
+                bat = self.myCar.read()
+                battery_level.set(bat)
 
         marcaAuto = Label(self.C_test, text='Model: ' + str(self.car), font=("Arial ", 20), justify=CENTER)
         marcaAuto.place(x=0,y=10)
@@ -361,21 +361,16 @@ class Test_Drive:
             exit_button.place(x=380,y=580)
         botton_help = Button(self.C_test, bitmap='question', relief = FLAT, command= ayuda)
         botton_help.place(x=990, y=695)
-        #--------------------Boton Update bateria---------------------#
-        refresh = Button(self.C_test, bitmap ='warning', command= read_battery)
-        refresh.place(x=1010,y=5)
+
         #Funcion que cambia el color del indicador
         def cambiaColor():
 
             if self.pwm == 0:
                 speed.config(fg = 'green')
-
             elif self.pwm >= 10 and self.pwm <= 490:
                 speed.config(fg= 'blue')
-
             elif self.pwm >= 500:
                 speed.config(fg='red')
-
             elif self.pwm <= -10 and self.pwm >= -490:
                 speed.config(fg = 'black')
             elif self.pwm <=-500:
@@ -398,6 +393,8 @@ class Test_Drive:
             turn_left = Thread(target = gira_izquierda,args=())
             turn_left.start()
 
+        thread = Thread(target=read_battery, args=())
+        thread.start()
         #---------------------------Binding Events--------------------#
         self.V_test.bind("w", acelera) ##Acelerador, con tecla W
         self.V_test.bind("s", reverse) ##Freno, con tecla S
