@@ -11,33 +11,33 @@ from WiFiClient import NodeMCU
 Clase que dibuja la ventana test drive 
 
 Atributos:
-height  = int, alto de ventana
-width = int, ancho de ventana
+-height  = int, alto de ventana
+-width = int, ancho de ventana
 
-V_test = instancia de Tk()
-v_test.tittle = titulo de la ventana
-v_test.resizable = configuracion del tamaño  de la ventana
+-V_test = instancia de Tk()
+-v_test.tittle = titulo de la ventana
+-v_test.resizable = configuracion del tamaño  de la ventana
 
-C_test = canvas para dibujar
-C_test.place = configuracion del lugar del canvas
+-C_test = canvas para dibujar
+-C_test.place = configuracion del lugar del canvas
 
 ****Variables para controlar el carro****
-pwm = motor
-lf = luces frontales
-lb = lucer traseras
-ld = direccional derecha
-li = direccional izquierda
-le = direccionales de emergencia
+-pwm = motor
+-lf = luces frontales
+-lb = lucer traseras
+-ld = direccional derecha
+-li = direccional izquierda
+-le = direccionales de emergencia
 
 **** Configuracion del carro ****
-myCar = instancia de NodeMCU()
-myCar.start = crea conexion
+-myCar = instancia de NodeMCU()
+-myCar.start = crea conexion
 
 Metodos:
 
-cargarImagen = cargar imagenes mas facilmente
++cargarImagen = cargar imagenes mas facilmente
 
-__draw__ dibuja la ventana, con todos los componentes
++__draw__ dibuja la ventana, con todos los componentes
 
 
 
@@ -105,7 +105,8 @@ class Test_Drive:
             else:
                 self.pwm += aceleracion
                 speed.config(text=str(self.pwm))
-                msg = 'pwm: ' + str(self.pwm)+ ' ;'
+
+                msg = 'pwm: ' + str(self.pwm) + ' ;'
                 self.myCar.send(msg)
                 cambiaColor()
                 print('comando enviado: ', msg)
@@ -118,9 +119,9 @@ class Test_Drive:
 
                 self.pwm-=aceleracion
                 speed.config(text=str(self.pwm))
-                msg = 'pwm: ' + str(self.pwm)+ ' ;'
+                msg = 'pwm: ' + str(self.pwm) + ' ;'
                 self.myCar.send(msg)
-                #print('comando enviado: ', msg)
+                print('comando enviado: ', msg)
                 cambiaColor()
         #Funcion que enciende direcionales derechas
         def dir_lights_right(): #YA ENVIA COMANDOS
@@ -247,11 +248,14 @@ class Test_Drive:
                 cambiaColor()
 
         #===================Celebracion==============#
-        #enciende y apaga las luces de emergencia, a manera de burla a los perdedores
-        def celebracion(event):
-            pass
-           #--------------------Boton Update bateria---------------------#
 
+        def celebracion(event):
+           self.myCar.send('celebra:1;')
+           print('celebracion')
+           #--------------------Boton Update bateria---------------------#
+        def especial(event):
+            self.myCar.send('especial:1;')
+            print('mov. especial')
         #Funcion que enciende luces frontales
         def enciende_frontales(event):
             if self.lf == 0:
@@ -400,6 +404,7 @@ class Test_Drive:
         self.V_test.bind('b', enciende_traseras)
         self.V_test.bind('e', enciende_emergencia)
         self.V_test.bind('c', celebracion)
+        self.V_test.bind('z',especial)
 
         self.V_test.mainloop()
 
