@@ -6,6 +6,7 @@ from time import sleep
 
 from WiFiClient import NodeMCU
 
+## PYTHON 3.7
 
 """
 Clase que dibuja la ventana test drive 
@@ -314,9 +315,6 @@ class Test_Drive:
 
         #---------------Volante con medidor velocidad----------------#
         steer_image = self.cargarImagen('bg.png')
-        #print("Working directory: ", os.getcwd())
-        #self.C_test.create_image(0, 450, anchor=NW, image=steer_image)
-        #print(steer_image)
         steer = Label(self.C_test, image = steer_image)
         steer.image = steer_image
         steer.place(x=0,y=450)
@@ -409,8 +407,6 @@ class Test_Drive:
         self.V_test.mainloop()
 
 
-#test_drive = Test_Drive('auto', 'conductor', 'pais', 'equipo')
-#test_drive.__draw__()
 
 
 

@@ -423,19 +423,13 @@ String implementar(String llave, String valor){
 }
 
 /**
- * Función para obtener los valores de telemetría del auto
+ * Función para obtener nivel de bateria
  */
 int getbattery(){
   
   // Lectura del nivel de bateria
   int battery_read = analogRead(battery); // Se lee el pin de la bateria
-  //float battery_per = ((battery_read)/1023)*100; // formula que pasa de 0-1023 a 0-100%
-  //char batteryLvl = String(battery_per) + "%"; // concatenacion del "%" para estetica :)
-
-  //Lectura del nivel de luz (digital)
-  //int light = digitalRead(ldr); // lee si hay luz o no, es binario (0 o 1)
-
-  // EQUIVALENTE A UTILIZAR STR.FORMAT EN PYTHON, %d -> valor decimal
+  
   int sense = battery_read;
   Serial.print("Sensing: ");
   Serial.println(sense);

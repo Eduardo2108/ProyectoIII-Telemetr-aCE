@@ -1,4 +1,2 @@
-{Nombre: "Nico Rosberg", Edad: "33 años", Nacionalidad: "Alemania", Temporada: "2016", Competencias participadas: "136", Participaciones destacadas: "55", Participaciones fallidas: "0", Victorias: "26"}
-{Nombre: "Lewis Hamilton", Edad: "33 años", Nacionalidad: "Gran Bretaña", Temporada: "2019", Competencias participadas: "125", Participaciones destacadas: "90", Participaciones fallidas: "0", Victorias: "56"}
-{Nombre: "Michael Schumacher", Edad: "50 años", Nacionalidad: "Alemania", Temporada: "2012", Competencias participadas: "58", Participaciones destacadas: "1", Participaciones fallidas: "0", Victorias: "0"}
-{Nombre: "Valtteri Bottas", Edad: "29 años", Nacionalidad: "Finlandia", Temporada: "2019", Competencias participadas: "47", Participaciones destacadas: "27", Participaciones fallidas: "0", Victorias: "5"}
+{Nombre: "Jenson Button", Edad: "39 años", Nacionalidad: "Inglaterra", Temporada: "2008", Competencias participadas: "18", Participaciones destacadas: "1", Participaciones fallidas: "0", Victorias: "1"}
+{Nombre: "Rubens Barrichello", Edad: "47 años", Nacionalidad: "Brasil", Temporada: "2008", Competencias participadas: "18", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
