@@ -45,7 +45,7 @@ __draw__ dibuja la ventana, con todos los componentes
 
 class Test_Drive:
 
-    def __init__(self):
+    def __init__(self, car, team, driver, country):
 
         #-------------------Settings of window-----------------#
         self.height = 728
@@ -53,7 +53,7 @@ class Test_Drive:
 
         #Window itself
         self.V_test = Tk()
-        self.V_test.title('Formula CE')
+        self.V_test.title('Test Drive')
         self.V_test.minsize(self.width, self.height)
         self.V_test.resizable(width=NO, height=NO)
 
@@ -71,16 +71,22 @@ class Test_Drive:
         self.le = 0
         self.dir_state = 0
         self.direccion = 0
+        #-------------------Datos---------------------#
+        self.car = car
+        self.driver = driver
+        self.country = country
+        self.team = team
         # ------------------Instancia del carro-------------------#
         self.myCar = NodeMCU()
         self.myCar.start()
-    #Funcion que carga las imagenes a Tkinter
+    # Funcion que carga las imagenes a Tkinter
+
     def cargarImagen(self, nombre):
         ruta = os.path.join('resources', nombre)
         imagen = PhotoImage(file=ruta)
         return imagen
     #Funcion que dibuja en la ventana
-    def __draw__(self, car, driver, country, team):
+    def __draw__(self):
         #Configuraciones del carro
         aceleracion = 100
         #Configuracion del velocimetro
@@ -98,7 +104,7 @@ class Test_Drive:
                 print("velocidad maxima")
             else:
                 self.pwm += aceleracion
-                count.set(self.pwm)
+                speed.config(text=str(self.pwm))
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
                 self.myCar.send(msg)
                 cambiaColor()
@@ -111,7 +117,7 @@ class Test_Drive:
             else:
 
                 self.pwm-=aceleracion
-                count.set(self.pwm)
+                speed.config(text=str(self.pwm))
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
                 self.myCar.send(msg)
                 #print('comando enviado: ', msg)
@@ -206,9 +212,7 @@ class Test_Drive:
                 msg = 'dir:0;'
                 self.myCar.send(msg)
                 print('Comando giro enviado: ', msg)
-
         #Funcion que gira a la izquierda
-
         def gira_izquierda():
             if self.direccion == 0:
                 self.direccion = -1
@@ -225,12 +229,11 @@ class Test_Drive:
             #msg = 'dir:0;'
             #self.myCar.send(msg)
             #print('Comando giro enviado: ', msg)
-
         #Funcion que frena el carro
         def brake(event):
             if self.pwm > 0:
                 self.pwm -= 50
-                count.set(self.pwm)
+                speed.config(text=str(self.pwm))
                 print(count)
                 msg = 'pwm: ' + str(self.pwm)+ ' ;'
                 self.myCar.send(msg)
@@ -238,8 +241,7 @@ class Test_Drive:
                 cambiaColor()
             elif self.pwm <0:
                 self.pwm +=50
-                count.set(self.pwm)
-                msg = 'pwm: ' + str(self.pwm)+ ' ;'
+                speed.config(text=str(self.pwm))
                 self.myCar.send(msg)
                 print('comando enviado: ', msg)
                 cambiaColor()
@@ -295,24 +297,17 @@ class Test_Drive:
             print ('lvl: ', btry)
             battery_level.set(btry )
             print('Bateria actualizada..')
-            time.sleep(0.5)
 
-        #def updateBattery():
-        #thread_battery = Threaed(target= read_battery, args=())
-        #thread_battery.start()
-        #updateBattery()
-        #Etiquetas de informacion, carro, piloto...
-        #Etiqueta del modelo del carro.
-        marcaAuto = Label(self.C_test, text='Model: ' + str(car), font=("Arial ", 20), justify=CENTER)
+        marcaAuto = Label(self.C_test, text='Model: ' + str(self.car), font=("Arial ", 20), justify=CENTER)
         marcaAuto.place(x=0,y=10)
         #Etiqueta conductor.
-        Nombre = Label(self.C_test, text ="Driver: " + str(driver), font=("Arial", 20), width = 15, justify= LEFT)
+        Nombre = Label(self.C_test, text ="Driver: " + str(self.driver), font=("Arial", 20), width = 15, justify= LEFT)
         Nombre.place(x=-25, y= 50)
         #Etiqueta pais
-        Country = Label(self.C_test, text= str(country), font=('Arial', 20), justify=CENTER)
+        Country = Label(self.C_test, text= str(self.country), font=('Arial', 20), justify=CENTER)
         Country.place(x=220, y= 50)
         #Etiqueta del equipo
-        Team = Label(self.C_test, text ='Team: ' + str(team), font=('Arial', 20), justify=CENTER)
+        Team = Label(self.C_test, text ='Team: ' + str(self.team), font=('Arial', 20), justify=CENTER)
         Team.place(x=0, y =90)
 
 
@@ -322,13 +317,14 @@ class Test_Drive:
 
         #---------------Volante con medidor velocidad----------------#
         steer_image = self.cargarImagen('bg.png')
-        steer = Label(self.C_test, image = steer_image)
-        steer.image = steer_image
-        steer.place(x=0,y=450)
+        #print(steer_image)
+        #steer = Label(self.C_test, image = steer_image)
+        #steer.image = steer_image
+        #steer.place(x=0,y=450)
 
 
         #-----------------Indicador velocidad------------------------#
-        speed = Label(self.C_test, textvariable=count, font=('Unispace', 45), fg=color)
+        speed = Label(self.C_test, text='0', font=('Unispace', 45), fg=color)
         speed.place(x=490,y=570)
 
         #--------------------Indicador de bateria--------------------#
@@ -413,12 +409,12 @@ class Test_Drive:
         self.V_test.bind('e', enciende_emergencia)
         self.V_test.bind('c', celebracion)
 
-
         self.V_test.mainloop()
 
 
+#test_drive = Test_Drive('auto', 'conductor', 'pais', 'equipo')
+#test_drive.__draw__()
 
 
 
-ventana  = Test_Drive()
-ventana.__draw__('mercedes','Eduardo','CRC','Red Bull')
+

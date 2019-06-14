@@ -1,0 +1,1 @@
+{Nombre: "Mercedes", Ubicacion Geografica: "Alemania", Patrocinadores: "EPSON, Petronas, Tommy Hilfiger"}

@@ -1,0 +1,2 @@
+{Marca: "Red Bull", Modelo: "RB15", Pais de fabricacion: "Austria", Foto: "RedBul_RB15.PNG", Anio de temporada: "2019", Cantidad de baterias: "2", Pilas por bateria: "4", Tension por bateria: "N", Estado: "N", Consumo de motores: "N", Sensores: "1", Peso: "800kg", Eficiencia: "N"}
+{Marca: "Red Bull", Modelo: "RB14", Pais de fabricacion: "Austria", Foto: "RedBul_RB14.PNG", Anio de temporada: "2018", Cantidad de baterias: "2", Pilas por bateria: "4", Tension por bateria: "N", Estado: "N", Consumo de motores: "N", Sensores: "1", Peso: "800kg", Eficiencia: "N"}
