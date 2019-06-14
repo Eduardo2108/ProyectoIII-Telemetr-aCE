@@ -44,13 +44,13 @@ class NodeMCU(Thread):
     interval = 0.100            #Intervalo para escribir nuevos mensajes
     loop = False                #Variable que controla el loop infinito
     timeoutLimit = 0.5           #Tiempo de espera por la respuesta.
-    
+
     
     #           ___________________________           
     #__________/Constructor de la clase
     def __init__(self, ip = '192.168.43.200', port = 7070):
         Thread.__init__(self)
-        self.node_address = (ip,port)
+        self.node_address = (ip, port)
         
     #           _____________________________________   
     #__________/Función del Thread que se reescribe

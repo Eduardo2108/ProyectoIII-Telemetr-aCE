@@ -173,10 +173,16 @@ def mostrar_ventanaescuderia(escuderia):
 # Metodo independiente:  Mustra la ventana de captura de informacion para el "Test drive"  y oculta las
 # demas ventanas.
 def mostrar_ventanatestdrive(escuderia):
+
     def show_td(car, driver, coun, team):
 
         ventanaescuderia.iconify()
         test_drive = Test_Drive(car,team,driver,coun)
+
+        #img = test_drive.cargarImagen('bg.png')
+        #label = Label(test_drive.C_test,image = img)
+        #label.place(0,450)
+
         test_drive.__draw__()
 
     ventanaescuderia.iconify()
@@ -215,6 +221,7 @@ def mostrar_ventanatestdrive(escuderia):
 
     volver = Button(ventanatestdrive, text="Volver", command=lambda: mostrar_ventanaescuderia(escuderia), bg="White",
                     font=("Courier", 11))
+
     volver.place(x=10, y=300)
     ventanatestdrive.mainloop()
 

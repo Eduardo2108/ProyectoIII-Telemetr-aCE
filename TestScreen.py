@@ -52,7 +52,7 @@ class Test_Drive:
         self.width = 1024
 
         #Window itself
-        self.V_test = Tk()
+        self.V_test = Toplevel()
         self.V_test.title('Test Drive')
         self.V_test.minsize(self.width, self.height)
         self.V_test.resizable(width=NO, height=NO)
@@ -82,7 +82,7 @@ class Test_Drive:
     # Funcion que carga las imagenes a Tkinter
 
     def cargarImagen(self, nombre):
-        ruta = os.path.join('resources', nombre)
+        ruta = os.path.join("resources", nombre)
         imagen = PhotoImage(file=ruta)
         return imagen
     #Funcion que dibuja en la ventana
@@ -317,10 +317,12 @@ class Test_Drive:
 
         #---------------Volante con medidor velocidad----------------#
         steer_image = self.cargarImagen('bg.png')
+        #print("Working directory: ", os.getcwd())
+        #self.C_test.create_image(0, 450, anchor=NW, image=steer_image)
         #print(steer_image)
-        #steer = Label(self.C_test, image = steer_image)
-        #steer.image = steer_image
-        #steer.place(x=0,y=450)
+        steer = Label(self.C_test, image = steer_image)
+        steer.image = steer_image
+        steer.place(x=0,y=450)
 
 
         #-----------------Indicador velocidad------------------------#
