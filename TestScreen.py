@@ -249,18 +249,9 @@ class Test_Drive:
         #===================Celebracion==============#
         #enciende y apaga las luces de emergencia, a manera de burla a los perdedores
         def celebracion(event):
-            enciende_emergencia(event)
-            time.sleep(0.5)
-            enciende_emergencia(event)
-            time.sleep(0.5)
-            enciende_emergencia(event)
-            time.sleep(0.5)
-            enciende_emergencia(event)
-            time.sleep(0.5)
-            enciende_emergencia(event)
-            time.sleep(0.5)
-            enciende_emergencia(event)
-            time.sleep(0.5)
+            pass
+           #--------------------Boton Update bateria---------------------#
+
         #Funcion que enciende luces frontales
         def enciende_frontales(event):
             if self.lf == 0:
@@ -290,7 +281,9 @@ class Test_Drive:
                 self.myCar.send('le:0;')
                 self.le = 0
         #Funcion que lee la bateria
+
         def read_battery():
+
             while True:
                 level = self.myCar.send("sense;")
                 #print(self.myCar.read())
