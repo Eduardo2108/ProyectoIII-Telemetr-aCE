@@ -1,0 +1,2 @@
+{Marca: "BMW", Modelo: "X1", Pais de fabricacion: "Alemania", Foto: "BMW_X1.PNG", Anio de temporada: "2009", Cantidad de baterias: "1", Pilas por bateria: "1", Tension por bateria: "1", Estado: "Libre", Consumo de motores: "1", Sensores: "1", Peso: "743kg", Eficiencia: "7"}
+{Marca: "BMW", Modelo: "X2", Pais de fabricacion: "Alemania", Foto: "BMW_X2.PNG", Anio de temporada: "2009", Cantidad de baterias: "1", Pilas por bateria: "1", Tension por bateria: "1", Estado: "Libre", Consumo de motores: "1", Sensores: "1", Peso: "743kg", Eficiencia: "6"}

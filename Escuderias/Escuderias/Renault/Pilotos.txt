@@ -1,0 +1,2 @@
+{Nombre: "Daniel Ricciardo", Edad: "30 años", Nacionalidad: "Australia", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
+{Nombre: "Nico Hülkenberg", Edad: "32 años", Nacionalidad: "Alemania", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}

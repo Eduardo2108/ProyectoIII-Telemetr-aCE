@@ -1,0 +1,2 @@
+{Nombre: "Robert Kubica", Edad: "34 años", Nacionalidad: "Polonia", Temporada: "2009", Competencias participadas: "51", Participaciones destacadas: "1", Participaciones fallidas: "0", Victorias: "1"}
+{Nombre: "Nick Heidfeld", Edad: "42 años", Nacionalidad: "Alemania", Temporada: "2009", Competencias participadas: "70", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}

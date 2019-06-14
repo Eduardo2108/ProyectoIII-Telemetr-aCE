@@ -1,0 +1,2 @@
+{Nombre: "Pierre Gasly", Edad: "23 años", Nacionalidad: "Francia", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
+{Nombre: "Max Verstappen", Edad: "22 años", Nacionalidad: "Holanda", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}

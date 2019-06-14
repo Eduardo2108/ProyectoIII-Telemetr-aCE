@@ -1,0 +1,2 @@
+{Nombre: "Kimi Räikkönen", Edad: "39 años", Nacionalidad: "Finlandia", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
+{Nombre: "Antonio Giovinazzi", Edad: "25 años", Nacionalidad: "Italia", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}

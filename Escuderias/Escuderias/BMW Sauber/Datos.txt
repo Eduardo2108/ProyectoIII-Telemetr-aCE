@@ -1,0 +1,1 @@
+{Nombre: "BMW Sauber", Ubicacion Geografica: "Alemania", Patrocinadores: "Intel, Petronas, DELL"}

@@ -1,0 +1,1 @@
+{Nombre: "McLaren", Ubicacion Geografica: "Reino Unido", Patrocinadores: "DELL, Petrobras, FxPro"}

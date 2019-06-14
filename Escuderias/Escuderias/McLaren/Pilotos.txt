@@ -1,0 +1,2 @@
+{Nombre: "Lando Norris", Edad: "20 años", Nacionalidad: "Reino Unido", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
+{Nombre: "Carlos Sainz", Edad: "25 años", Nacionalidad: "Espania", Temporada: "2019", Competencias participadas: "7", Participaciones destacadas: "0", Participaciones fallidas: "0", Victorias: "0"}
